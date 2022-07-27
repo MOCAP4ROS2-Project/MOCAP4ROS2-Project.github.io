@@ -143,6 +143,10 @@
 </table>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
+<p>Ensure you have installed the Turtlebot3 packages to get the gazebo models</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">sudo apt install ros-humble-turtlebot3*</span>
+</pre></div>
+</div>
 <p>Remember to correctly set the <code class="docutils literal notranslate"><span class="pre">GAZEBO_MODEL_PATH</span></code> in order to found the gazebo models.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">export TURTLEBOT3_MODEL=waffle</span>
 <span class="go">export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:/opt/ros/humble/share/turtlebot3_gazebo/models</span>
