@@ -128,9 +128,19 @@
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">mocap4ros2_ws$ ros2 launch gazebo_mocap_plugin tb3_simulation_launch.py</span>
 </pre></div>
 </div>
-<a class="reference internal image-reference" href="../_images/getting_started_4a.png"><img alt="../_images/getting_started_4a.png" class="align-center" src="../_images/getting_started_4a.png" style="width: 400px;" /></a>
-<a class="reference internal image-reference" href="../_images/getting_started_4b.png"><img alt="../_images/getting_started_4b.png" class="align-center" src="../_images/getting_started_4b.png" style="width: 400px;" /></a>
-<p>run <cite>gzclient</cite> if you want to see the simulation.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 48%" />
+<col style="width: 52%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td rowspan="2"><p><a class="reference internal" href="../_images/getting_started_4a.png"><img alt="image1" src="../_images/getting_started_4a.png" style="width: 400px;" /></a></p></td>
+<td rowspan="2"><p><a class="reference internal" href="../_images/getting_started_4b.png"><img alt="image2" src="../_images/getting_started_4b.png" style="width: 400px;" /></a></p></td>
+</tr>
+<tr class="row-even"></tr>
+</tbody>
+</table>
+<p>ru1n <cite>gzclient</cite> if you want to see the simulation.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">mocap4ros2_ws$ gzclient</span>
 </pre></div>
 </div>
@@ -140,7 +150,7 @@
 <span class="go">export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:/home/&lt;your-user&gt;/mocap4ros2_ws/install/gazebo_mocap_plugin/share/gazebo_mocap_plugin/models/</span>
 </pre></div>
 </div>
-<ol class="arabic simple" start="5">
+<ol class="arabic simple">
 <li><p>Run RQT Gui and load the MocapControl plugin under “Plugins -&gt; MOCAP4ROS2 -&gt; Mocap Control”</p></li>
 </ol>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">mocap4ros2_ws$ ros2 run rqt_gui rqt_gui --force-discover</span>
@@ -163,7 +173,7 @@
 </pre></div>
 </div>
 <p>Check in Rviz how a new frame, <cite>base_footprint_gt</cite> exists and is the real robot position. Move the robot and see how this TF track the robot position.</p>
-<a class="reference internal image-reference" href="../_images/getting_started_7.png"><img alt="../_images/getting_started_7.png" class="align-right" src="../_images/getting_started_7.png" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="../_images/getting_started_7.png"><img alt="../_images/getting_started_7.png" class="align-center" src="../_images/getting_started_7.png" style="width: 500px;" /></a>
 <ol class="arabic simple" start="8">
 <li><p>Press the button “Stop” in MocapControl to stop the gazebo mocap.</p></li>
 </ol>
