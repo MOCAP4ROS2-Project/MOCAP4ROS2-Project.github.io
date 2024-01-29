@@ -20,6 +20,7 @@ Overview
 MOCAP4ROS2 is a Focused Technical Project funded initially by ROSIN. Its goal is to standardize the Motion Capture (mocap in short) Systems by providing standard interfaces that any mocap driver should respect when publishing its data and any mocap application could expect. MOCAP4ROS2 also provides tools to monitorize and control one or many mocap system running at the same time.
 
 MOCAP4ROS2 features:
+
 * Support for major mocap vendors: `Vicon <https://github.com/MOCAP4ROS2-Project/mocap4ros2_vicon>`_, `Optitrack <https://github.com/MOCAP4ROS2-Project/mocap4ros2_optitrack>`_, and `Qualisys <https://github.com/MOCAP4ROS2-Project/mocap4ros2_qualisys>`_.
 * a `Standard interfaces <https://github.com/MOCAP4ROS2-Project/mocap4r2_msgs>`_ for Motion capture data: Markers and RigidBodies
 * a `Interfaces for control <https://github.com/MOCAP4ROS2-Project/mocap4r2/tree/rolling/mocap4r2_control/mocap4r2_control_msgs>`_ mocap systems.
