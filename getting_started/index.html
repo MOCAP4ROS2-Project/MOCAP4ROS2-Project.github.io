@@ -58,12 +58,12 @@
               <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Getting Started</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#clone-the-repositories">1. Clone the Repositories</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#install-dependencies">2. Install Dependencies</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#build-the-workspace">3. Build the Workspace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#install-dependencies">1. Install Dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#build-the-workspace">1. Build the Workspace</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#launch-the-simulator">4. Launch the Simulator</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#run-rqt-gui-and-load-the-mocapcontrol-plugin">5. Run RQT Gui and Load the MocapControl Plugin</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#press-the-start-button-in-mocapcontrol-and-verify-marker-and-rigid-body-publications">6. Press the “Start” Button in MocapControl and Verify Marker and Rigid Body Publications</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#execute-the-ground-truth-program">7. Execute the Ground Truth Program</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#run-rqt-gui-and-load-the-mocapcontrol-plugin">1. Run RQT Gui and Load the MocapControl Plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#start-mocapcontrol">1. Start MocapControl</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#execute-the-ground-truth-program">1. Execute the Ground Truth Program</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../build_instructions/index.html">Build and Install</a><ul>
@@ -136,42 +136,43 @@
 <p class="topic-title">Steps</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#clone-the-repositories" id="id1">1. Clone the Repositories</a></p></li>
-<li><p><a class="reference internal" href="#install-dependencies" id="id2">2. Install Dependencies</a></p></li>
-<li><p><a class="reference internal" href="#build-the-workspace" id="id3">3. Build the Workspace</a></p></li>
+<li><p><a class="reference internal" href="#install-dependencies" id="id2">1. Install Dependencies</a></p></li>
+<li><p><a class="reference internal" href="#build-the-workspace" id="id3">1. Build the Workspace</a></p></li>
 <li><p><a class="reference internal" href="#launch-the-simulator" id="id4">4. Launch the Simulator</a></p></li>
-<li><p><a class="reference internal" href="#run-rqt-gui-and-load-the-mocapcontrol-plugin" id="id5">5. Run RQT Gui and Load the MocapControl Plugin</a></p></li>
-<li><p><a class="reference internal" href="#press-the-start-button-in-mocapcontrol-and-verify-marker-and-rigid-body-publications" id="id6">6. Press the “Start” Button in MocapControl and Verify Marker and Rigid Body Publications</a></p></li>
-<li><p><a class="reference internal" href="#execute-the-ground-truth-program" id="id7">7. Execute the Ground Truth Program</a></p></li>
+<li><p><a class="reference internal" href="#run-rqt-gui-and-load-the-mocapcontrol-plugin" id="id5">1. Run RQT Gui and Load the MocapControl Plugin</a></p></li>
+<li><p><a class="reference internal" href="#start-mocapcontrol" id="id6">1. Start MocapControl</a></p></li>
+<li><p><a class="reference internal" href="#execute-the-ground-truth-program" id="id7">1. Execute the Ground Truth Program</a></p></li>
 </ul>
 </nav>
 <section id="clone-the-repositories">
 <h2><a class="toc-backref" href="#id1" role="doc-backlink">1. Clone the Repositories</a><a class="headerlink" href="#clone-the-repositories" title="Link to this heading"></a></h2>
-<p>Begin by cloning the necessary repositories into your workspace:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">mocap4r2_ws$ git clone https://github.com/MOCAP4ROS2-Project/mocap4ros2_gazebo.git</span>
-<span class="go">mocap4r2_ws$ git clone https://github.com/MOCAP4ROS2-Project/mocap4r2.git</span>
+<p>Begin by cloning the necessary repositories into your <code class="docutils literal notranslate"><span class="pre">src</span></code> folder inside your workspace (e.g., <code class="docutils literal notranslate"><span class="pre">mocap4r2_ws</span></code>):</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git clone https://github.com/MOCAP4ROS2-Project/mocap4ros2_gazebo.git</span>
 </pre></div>
 </div>
 </section>
 <section id="install-dependencies">
-<h2><a class="toc-backref" href="#id2" role="doc-backlink">2. Install Dependencies</a><a class="headerlink" href="#install-dependencies" title="Link to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">1. Install Dependencies</a><a class="headerlink" href="#install-dependencies" title="Link to this heading"></a></h2>
 <p>To install all required dependencies, use the <cite>.repos</cite> file provided:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">mocap4r2_ws$ vcs import &lt; mocap4r2/dependency_repos.repos</span>
-<span class="go">mocap4r2_ws$ rosdep install --from-paths src --ignore-src -y</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">vcs import &lt; mocap4ros2_gazebo/dependency_repos.repos</span>
 </pre></div>
 </div>
 </section>
 <section id="build-the-workspace">
-<h2><a class="toc-backref" href="#id3" role="doc-backlink">3. Build the Workspace</a><a class="headerlink" href="#build-the-workspace" title="Link to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">1. Build the Workspace</a><a class="headerlink" href="#build-the-workspace" title="Link to this heading"></a></h2>
 <p>Once the repositories and dependencies are in place, build the workspace using <cite>colcon</cite>:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">mocap4r2_ws$ colcon build --symlink-install</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd ..</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">colcon build --symlink-install</span>
 </pre></div>
 </div>
 </section>
 <section id="launch-the-simulator">
 <h2><a class="toc-backref" href="#id4" role="doc-backlink">4. Launch the Simulator</a><a class="headerlink" href="#launch-the-simulator" title="Link to this heading"></a></h2>
 <p>Source your workspace and launch the TurtleBot3 simulation with the following commands:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">mocap4r2_ws$ source install/setup.bash</span>
-<span class="go">mocap4r2_ws$ ros2 launch mocap4r2_gz_plugin tb3_simulation_launch.py</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">source install/setup.bash</span>
+<span class="go">ros2 launch mocap4r2_gz_plugin tb3_simulation_launch.py</span>
 </pre></div>
 </div>
 <table class="docutils align-default">
@@ -183,14 +184,14 @@
 </tbody>
 </table>
 <p>To visualize the simulation in Gazebo, execute the following command:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">mocap4r2_ws$ gz sim</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">gz sim</span>
 </pre></div>
 </div>
 </section>
 <section id="run-rqt-gui-and-load-the-mocapcontrol-plugin">
-<h2><a class="toc-backref" href="#id5" role="doc-backlink">5. Run RQT Gui and Load the MocapControl Plugin</a><a class="headerlink" href="#run-rqt-gui-and-load-the-mocapcontrol-plugin" title="Link to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id5" role="doc-backlink">1. Run RQT Gui and Load the MocapControl Plugin</a><a class="headerlink" href="#run-rqt-gui-and-load-the-mocapcontrol-plugin" title="Link to this heading"></a></h2>
 <p>Execute the following command to run the RQT GUI and load the MocapControl plugin:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">mocap4ros2_ws$ ros2 run rqt_gui rqt_gui --force-discover</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 run rqt_gui rqt_gui --force-discover</span>
 </pre></div>
 </div>
 <table class="docutils align-default">
@@ -201,8 +202,8 @@
 </tbody>
 </table>
 </section>
-<section id="press-the-start-button-in-mocapcontrol-and-verify-marker-and-rigid-body-publications">
-<h2><a class="toc-backref" href="#id6" role="doc-backlink">6. Press the “Start” Button in MocapControl and Verify Marker and Rigid Body Publications</a><a class="headerlink" href="#press-the-start-button-in-mocapcontrol-and-verify-marker-and-rigid-body-publications" title="Link to this heading"></a></h2>
+<section id="start-mocapcontrol">
+<h2><a class="toc-backref" href="#id6" role="doc-backlink">1. Start MocapControl</a><a class="headerlink" href="#start-mocapcontrol" title="Link to this heading"></a></h2>
 <p>Press the “Start” button in MocapControl and check that markers and rigid bodies are being published:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 topic echo /markers</span>
 </pre></div>
@@ -212,19 +213,12 @@
 </div>
 </section>
 <section id="execute-the-ground-truth-program">
-<h2><a class="toc-backref" href="#id7" role="doc-backlink">7. Execute the Ground Truth Program</a><a class="headerlink" href="#execute-the-ground-truth-program" title="Link to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id7" role="doc-backlink">1. Execute the Ground Truth Program</a><a class="headerlink" href="#execute-the-ground-truth-program" title="Link to this heading"></a></h2>
 <p>To run the ground truth program, use the following command:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">mocap4r2_ws$ ros2 run mocap4r2_robot_gt gt_program --ros-args -p robot_frame:=map</span>
 </pre></div>
 </div>
 <p>Check in Rviz how a new frame, <cite>base_footprint_gt</cite> exists and is the real robot position. Move the robot and see how this TF track the robot position.</p>
-<table class="docutils align-default">
-<tbody>
-<tr class="row-odd"><td rowspan="2"><p><a class="reference internal" href="../_images/getting_started_7.png"><img alt="image5" class="align-middle" src="../_images/getting_started_7.png" style="width: 500px;" /></a></p></td>
-</tr>
-<tr class="row-even"></tr>
-</tbody>
-</table>
 <p>Press the button “Stop” in MocapControl to stop the gazebo mocap.</p>
 </section>
 </section>
