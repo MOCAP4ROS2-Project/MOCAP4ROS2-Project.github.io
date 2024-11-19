@@ -35,13 +35,14 @@ To test the OptiTrack system, follow these steps:
 
     vcs import < mocap4ros2_optitrack/dependency_repos.repos
     rosdep update # May not be needed if already done
-    cd .. && rosdep install --from-paths src --ignore-src -r -y
+    mocap4r2_ws$ cd .. && rosdep install --from-paths src --ignore-src -r -y
 
 3. Build the workspace:
 
 .. code-block:: console
 
-    colcon build --symlink-install
+    cd ~/mocap4r2_ws/
+    mocap4r2_ws$ colcon build --symlink-install
 
 Configuration
 -------------

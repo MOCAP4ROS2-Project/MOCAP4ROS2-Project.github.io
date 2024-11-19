@@ -24,8 +24,6 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Mocap4r2 design" href="../design/index.html" />
-    <link rel="prev" title="Getting Started" href="../getting_started/index.html" />
 
 <link rel="stylesheet" href="../_static/tcs_theme.css" type="text/css" />
 
@@ -55,7 +53,7 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul class="current">
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">Getting Started</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../getting_started/index.html#clone-the-repositories">1. Clone the Repositories</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../getting_started/index.html#install-dependencies">2. Install Dependencies</a></li>
@@ -66,17 +64,17 @@
 <li class="toctree-l2"><a class="reference internal" href="../getting_started/index.html#execute-the-ground-truth-program">7. Execute the Ground Truth Program</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Build and Install</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#optitrack-system">OptiTrack System</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#configuration">Configuration</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#launching">Launching</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#visualization">Visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Build and Install</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index.html#optitrack-system">OptiTrack System</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="index.html#configuration">Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#launching">Launching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#visualization">Visualization</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#vicon-system">Vicon System</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id1">Configuration</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id2">Launching</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id3">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#vicon-system">Vicon System</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id1">Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id2">Launching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id3">Visualization</a></li>
 </ul>
 </li>
 </ul>
@@ -154,13 +152,14 @@
 </ol>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">vcs import &lt; mocap4ros2_optitrack/dependency_repos.repos</span>
 <span class="go">rosdep update # May not be needed if already done</span>
-<span class="go">cd .. &amp;&amp; rosdep install --from-paths src --ignore-src -r -y</span>
+<span class="go">mocap4r2_ws$ cd .. &amp;&amp; rosdep install --from-paths src --ignore-src -r -y</span>
 </pre></div>
 </div>
 <ol class="arabic simple" start="3">
 <li><p>Build the workspace:</p></li>
 </ol>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">colcon build --symlink-install</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd ~/mocap4r2_ws/</span>
+<span class="go">mocap4r2_ws$ colcon build --symlink-install</span>
 </pre></div>
 </div>
 <section id="configuration">
