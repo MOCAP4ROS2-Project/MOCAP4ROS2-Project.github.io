@@ -23,18 +23,20 @@ To install all required dependencies, use the `.repos` file provided:
 
     vcs import < mocap4ros2_gazebo/dependency_repos.repos
 
+Make sure you are updated:
+
 .. code-block:: console
 
-    rosdep update # May not be needed if already done
+    rosdep update
+    sudo apt-get update
+
+.. code-block:: console
+      
     cd .. && rosdep install --from-paths src --ignore-src -r -y
 
-3. Build the Workspace
+1. Build the Workspace
 
 Once the repositories and dependencies are in place, build the workspace using `colcon`:
-
-.. code-block:: console
-
-        cd ..
 
 .. code-block:: console
 

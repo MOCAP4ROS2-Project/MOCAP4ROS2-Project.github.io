@@ -137,17 +137,18 @@
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">vcs import &lt; mocap4ros2_gazebo/dependency_repos.repos</span>
 </pre></div>
 </div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">rosdep update # May not be needed if already done</span>
-<span class="go">cd .. &amp;&amp; rosdep install --from-paths src --ignore-src -r -y</span>
+<p>Make sure you are updated:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">rosdep update</span>
+<span class="go">sudo apt-get update</span>
 </pre></div>
 </div>
-<ol class="arabic simple" start="3">
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd .. &amp;&amp; rosdep install --from-paths src --ignore-src -r -y</span>
+</pre></div>
+</div>
+<ol class="arabic simple">
 <li><p>Build the Workspace</p></li>
 </ol>
 <p>Once the repositories and dependencies are in place, build the workspace using <cite>colcon</cite>:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd ..</span>
-</pre></div>
-</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">colcon build --symlink-install</span>
 </pre></div>
 </div>
