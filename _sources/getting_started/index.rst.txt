@@ -49,11 +49,11 @@ Source your workspace and launch the TurtleBot3 simulation with the following co
     source install/setup.bash
     ros2 launch mocap4r2_gz_plugin tb3_simulation_launch.py headless:=False
 
-.. |image1| image:: images/getting_started_4a.png
+.. |image1| image:: images/getting_started_4_a.png
    :width: 400px
    :align: middle
 
-.. |image2| image:: images/getting_started_4b.png
+.. |image2| image:: images/getting_started_4_b.png
    :width: 400px
    :align: middle
 
