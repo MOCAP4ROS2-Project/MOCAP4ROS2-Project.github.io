@@ -56,12 +56,7 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Getting Started</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#run-rqt-gui-and-load-the-mocapcontrol-plugin">5. Run RQT Gui and Load the MocapControl Plugin</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#start-mocapcontrol">6. Start MocapControl</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#execute-the-ground-truth-program">7. Execute the Ground Truth Program</a></li>
-</ul>
-</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../build_instructions/index.html">Build and Install</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../build_instructions/index.html#optitrack-system">OptiTrack System</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../build_instructions/index.html#configuration">Configuration</a></li>
@@ -180,8 +175,9 @@
 <tr class="row-even"></tr>
 </tbody>
 </table>
-<section id="run-rqt-gui-and-load-the-mocapcontrol-plugin">
-<h2>5. Run RQT Gui and Load the MocapControl Plugin<a class="headerlink" href="#run-rqt-gui-and-load-the-mocapcontrol-plugin" title="Link to this heading"></a></h2>
+<ol class="arabic simple" start="5">
+<li><p>Run RQT Gui and Load the MocapControl Plugin</p></li>
+</ol>
 <p>Execute the following command to run the RQT GUI and load the MocapControl plugin:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 run rqt_gui rqt_gui --force-discover</span>
 </pre></div>
@@ -193,9 +189,9 @@
 <tr class="row-even"></tr>
 </tbody>
 </table>
-</section>
-<section id="start-mocapcontrol">
-<h2>6. Start MocapControl<a class="headerlink" href="#start-mocapcontrol" title="Link to this heading"></a></h2>
+<ol class="arabic simple" start="6">
+<li><p>Start MocapControl</p></li>
+</ol>
 <p>Press the “Start” button in MocapControl and check that markers and rigid bodies are being published:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 topic echo /markers</span>
 </pre></div>
@@ -203,16 +199,15 @@
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 topic echo /rigid_bodies</span>
 </pre></div>
 </div>
-</section>
-<section id="execute-the-ground-truth-program">
-<h2>7. Execute the Ground Truth Program<a class="headerlink" href="#execute-the-ground-truth-program" title="Link to this heading"></a></h2>
+<ol class="arabic simple" start="7">
+<li><p>Execute the Ground Truth Program</p></li>
+</ol>
 <p>To run the ground truth program, use the following command:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">mocap4r2_ws$ ros2 run mocap4r2_robot_gt gt_program --ros-args -p robot_frame:=map</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 run mocap4r2_robot_gt gt_program --ros-args -p robot_frame:=map</span>
 </pre></div>
 </div>
 <p>Check in Rviz how a new frame, <cite>base_footprint_gt</cite> exists and it is the real robot position. Move the robot and see how this TF track the robot position.</p>
 <p>Press the button “Stop” in MocapControl to stop the gazebo mocap.</p>
-</section>
 </section>
 
 
