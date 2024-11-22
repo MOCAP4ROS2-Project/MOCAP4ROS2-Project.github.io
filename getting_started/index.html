@@ -145,14 +145,25 @@
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd .. &amp;&amp; rosdep install --from-paths src --ignore-src -r -y</span>
 </pre></div>
 </div>
-<ol class="arabic simple">
+<ol class="arabic simple" start="3">
 <li><p>Build the Workspace</p></li>
 </ol>
+<p>Source your ROS 2 installation</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">source /opt/ros/jazzy/setup.bash</span>
+</pre></div>
+</div>
 <p>Once the repositories and dependencies are in place, build the workspace using <cite>colcon</cite>:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">colcon build --symlink-install</span>
 </pre></div>
 </div>
 <ol class="arabic simple" start="4">
+<li><p>Install Nav2 Bringup</p></li>
+</ol>
+<p>To install the Nav2 Bringup package, use the following command:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">sudo apt-get install ros-jazzy-nav2-bringup</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="5">
 <li><p>Launch the Simulator  with “a marker”. Remember to use the “2D Pose Estimate” tool in Rviz2 (in toolbar) to set the robot position (it is around (X: -2, Y: -0.5, Yaw: 0.0) ).</p></li>
 </ol>
 <p>Source your workspace and launch the TurtleBot3 simulation with the following commands:</p>
@@ -176,7 +187,7 @@
 <tr class="row-even"></tr>
 </tbody>
 </table>
-<ol class="arabic simple" start="5">
+<ol class="arabic simple" start="6">
 <li><p>Run RQT Gui and Load the MocapControl Plugin</p></li>
 </ol>
 <p>Execute the following command to run the RQT GUI and load the MocapControl plugin:</p>
@@ -190,7 +201,7 @@
 <tr class="row-even"></tr>
 </tbody>
 </table>
-<ol class="arabic simple" start="6">
+<ol class="arabic simple" start="7">
 <li><p>Start MocapControl</p></li>
 </ol>
 <p>Press the “Start” button in MocapControl and check that markers and rigid bodies are being published:</p>
@@ -200,11 +211,11 @@
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 topic echo /rigid_bodies</span>
 </pre></div>
 </div>
-<ol class="arabic simple" start="7">
+<ol class="arabic simple" start="8">
 <li><p>Execute the Ground Truth Program</p></li>
 </ol>
 <p>To run the ground truth program, use the following command:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 run mocap4r2_robot_gt gt_program --ros-args -p robot_frame:=map</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 run mocap4r2_robot_gt gt_program</span>
 </pre></div>
 </div>
 <p>Check in Rviz how a new frame, <cite>base_footprint_gt</cite> exists and it is the real robot position. Move the robot and see how this TF track the robot position.</p>
