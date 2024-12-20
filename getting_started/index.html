@@ -215,10 +215,17 @@
 <li><p>Execute the Ground Truth Program</p></li>
 </ol>
 <p>To run the ground truth program, use the following command:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 run mocap4r2_robot_gt gt_program</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 run mocap_robot_gt gt_program --ros-args -p root_frame:=map</span>
 </pre></div>
 </div>
 <p>Check in Rviz how a new frame, <cite>base_footprint_gt</cite> exists and it is the real robot position. Move the robot and see how this TF track the robot position.</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td rowspan="2"><p><a class="reference internal" href="../_images/getting_started_7.png"><img alt="image5" class="align-middle" src="../_images/getting_started_7.png" style="width: 500px;" /></a></p></td>
+</tr>
+<tr class="row-even"></tr>
+</tbody>
+</table>
 <p>Press the button “Stop” in MocapControl to stop the gazebo mocap.</p>
 </section>
 

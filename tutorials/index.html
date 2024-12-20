@@ -142,20 +142,20 @@
 <ol class="arabic simple" start="4">
 <li><p>Launch mocap otitrack driver</p></li>
 </ol>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">mocap4r2_ws$ source install/setup.bash</span>
-<span class="go">mocap4r2_ws$ ros2 launch mocap4r2_optitrack_driver optitrack2.launch.py</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">source install/setup.bash</span>
+<span class="go">ros2 launch mocap4r2_optitrack_driver optitrack2.launch.py</span>
 </pre></div>
 </div>
 <ol class="arabic simple" start="5">
 <li><p>Activate the mocap optitrack driver node</p></li>
 </ol>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">mocap4r2_ws$ ros2 lifecycle set /mocap_optitrack_driver_node activate</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 lifecycle set /mocap_optitrack_driver_node activate</span>
 </pre></div>
 </div>
 <ol class="arabic simple" start="6">
 <li><p>Create markers in Rviz</p></li>
 </ol>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">mocap4r2_ws$ ros2 launch mocap4r2_marker_viz mocap4r2_marker_viz.launch.py</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 launch mocap4r2_marker_viz mocap4r2_marker_viz.launch.py</span>
 </pre></div>
 </div>
 <ol class="arabic simple" start="7">

@@ -131,16 +131,16 @@
 <p class="admonition-title">Note</p>
 <p>The OptiTrack drivers for ROS2 are based on the NatNet SDK 3.1.0. When building the <cite>mocap4ros2_optitrack</cite> package, the SDK is automatically downloaded and installed.</p>
 <p>Additionally, this package depends on two repositories from the MOCAP4ROS2 project:
-- [mocap_interfaces](<a class="reference external" href="https://github.com/MOCAP4ROS2-Project/mocap_interfaces">https://github.com/MOCAP4ROS2-Project/mocap_interfaces</a>)
+- [mocap4r2_msgs](<a class="reference external" href="https://github.com/MOCAP4ROS2-Project/mocap4r2_msgs">https://github.com/MOCAP4ROS2-Project/mocap4r2_msgs</a>)
 - [mocap4r2_control](<a class="reference external" href="https://github.com/MOCAP4ROS2-Project/mocap4r2">https://github.com/MOCAP4ROS2-Project/mocap4r2</a>)</p>
 </div>
 <ol class="arabic simple">
 <li><p>Clone the required repositories into your <code class="docutils literal notranslate"><span class="pre">src</span></code> folder inside your workspace (e.g., <code class="docutils literal notranslate"><span class="pre">mocap4r2_ws</span></code>):</p></li>
 </ol>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git clone -b rep-mocap https://github.com/MOCAP4ROS2-Project/mocap4ros2_optitrack.git</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git clone https://github.com/MOCAP4ROS2-Project/mocap4ros2_optitrack.git</span>
 </pre></div>
 </div>
-<ol class="arabic simple">
+<ol class="arabic simple" start="2">
 <li><p>Manage ROS2 dependencies:</p></li>
 </ol>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">vcs import &lt; mocap4ros2_optitrack/dependency_repos.repos</span>
@@ -204,18 +204,17 @@
 </pre></div>
 </div>
 <ol class="arabic simple" start="3">
-<li><p>Manage ROS2 dependencies:</p></li>
+<li><p>Manage ROS2 dependencies in your mocap4r2_ws:</p></li>
 </ol>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">mocap4r2_ws$ sudo rosdep init  # May not be needed if already done</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">sudo rosdep init  # May not be needed if already done</span>
 <span class="go">rosdep update</span>
 <span class="go">rosdep install --from-paths src --ignore-src -r -y</span>
 </pre></div>
 </div>
 <ol class="arabic simple" start="4">
-<li><p>Build the workspace:</p></li>
+<li><p>Build the workspace (be sure to be in the root of your workspace):</p></li>
 </ol>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd ~/mocap4r2_ws/</span>
-<span class="go">colcon build --symlink-install --packages-up-to mocap4r2_vicon_driver</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">colcon build --symlink-install --packages-up-to mocap4r2_vicon_driver</span>
 </pre></div>
 </div>
 <section id="id1">
