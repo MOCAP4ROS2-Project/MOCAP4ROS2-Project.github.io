@@ -4,11 +4,12 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Unitree Go2 &mdash; Unitree Go2 Robot 1.0.0 documentation</title>
+  <title>MOCAP4ROS2 &mdash; ROS2 MOCAP System 1.0.0 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
-    <link rel="shortcut icon" href="_static/go_48x48.png"/>
+      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/mocap4ros2_48x48.png"/>
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -16,12 +17,14 @@
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
         <script src="_static/documentation_options.js?v=8d563738"></script>
-        <script src="_static/doctools.js?v=9bcbadda"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="_static/copybutton.js?v=17dd6af4"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="About and Contact" href="about/index.html" />
+    <link rel="next" title="Getting Started" href="getting_started/index.html" />
 
 <link rel="stylesheet" href="_static/tcs_theme.css" type="text/css" />
 
@@ -37,8 +40,8 @@
           
           
           <a href="#" class="icon icon-home">
-            Unitree Go2 Robot
-              <img src="_static/go2_logo.png" class="logo" alt="Logo"/>
+            ROS2 MOCAP System
+              <img src="_static/mocap4ros2_logo.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
                 latest
@@ -52,6 +55,32 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
+<li class="toctree-l1"><a class="reference internal" href="getting_started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="build_instructions/index.html">Build and Install</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="build_instructions/index.html#optitrack-system">OptiTrack System</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="build_instructions/index.html#configuration">Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="build_instructions/index.html#launching">Launching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="build_instructions/index.html#visualization">Visualization</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="build_instructions/index.html#vicon-system">Vicon System</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="build_instructions/index.html#id1">Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="build_instructions/index.html#id2">Launching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="build_instructions/index.html#id3">Visualization</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="design/index.html">Mocap4r2 design</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="design/index.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="design/index.html#key-design-components">Key Design Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="design/index.html#layer-interactions">Layer Interactions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/index.html">Tutorials</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tutorials/index.html#optitrack-system">Optitrack system</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="about/index.html">About and Contact</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="about/index.html#id1">About</a></li>
 <li class="toctree-l2"><a class="reference internal" href="about/index.html#contact">Contact</a></li>
@@ -65,13 +94,13 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: orange" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="#">Unitree Go2 Robot</a>
+          <a href="#">ROS2 MOCAP System</a>
       </nav>
 
       <div class="wy-nav-content">
 
 <span style="float: right;" >
-    <a class="github-button" href="https://github.com/PlanSys2/PlanSys2.github.io" data-color-scheme="no-preference: light; light: light; dark: dark;" data-size="large" aria-label="Edit IntelligentRoboticsLabs/plansys2.github.io on GitHub" ">Edit</a>
+    <a class="github-button" href="https://github.com/MOCAP4ROS2-Project/mocap4ros2.github.io" data-color-scheme="no-preference: light; light: light; dark: dark;" data-size="large" aria-label="Edit MOCAP4ROS2-Project/mocap4ros2.github.io on GitHub" ">Edit</a>
 </span>
 
 
@@ -79,7 +108,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Unitree Go2</li>
+      <li class="breadcrumb-item active">MOCAP4ROS2</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -89,20 +118,29 @@
            <div itemprop="articleBody">
              
   <section id="lpn">
-<span id="documentation-home"></span><h1>Unitree Go2<a class="headerlink" href="#lpn" title="Link to this heading"></a></h1>
+<span id="documentation-home"></span><h1>MOCAP4ROS2<a class="headerlink" href="#lpn" title="Link to this heading"></a></h1>
 <h1 align="center">
   <div>
     <div style="position: relative; padding-bottom: 0%; overflow: hidden; max-width: 100%; height: auto;">
-      <p align="center">
-        <img width="1280" height="420" src="https://github.com/IntelligentRoboticsLabs/go2_robot/assets/44479765/da616d77-cf4d-4acf-af2f-adc99f4f72d7" alt="Go2 Banner">
-      </p>
+      <iframe width="450" height="300" src="https://www.youtube-nocookie.com/embed/C8DI6OonV7Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe width="450" height="300" src="https://www.youtube-nocookie.com/embed/Z5kRd4MLgFU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
   </div>
 </h1><section id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
-<p>This repository for the unitree go 2 robot aims to use a wrapper to provide ros 2 users with a more familiar environment, with topics and services that allow them to know the status of the robot, to be able to teleoperate it, or to have it perform different actions.</p>
-<p>In addition, you can also find packages to make your robot able to navigate or simulate it.</p>
-<p>We hope that this repository will be of great help to the entire community, and of course we invite everyone to contribute to this <a class="reference external" href="https://github.com/Unitree-Go2-Robot">Open Source project in GitHub</a> !!!</p>
+<p>MOCAP4ROS2 is a Focused Technical Project funded initially by ROSIN. Its goal is to standardize the Motion Capture (mocap in short) Systems by providing standard interfaces that any mocap driver should respect when publishing its data and any mocap application could expect. MOCAP4ROS2 also provides tools to monitorize and control one or many mocap system running at the same time.</p>
+<p>MOCAP4ROS2 features:
+* Support for major mocap vendors: <a class="reference external" href="https://github.com/MOCAP4ROS2-Project/mocap4ros2_vicon">Vicon</a>, <a class="reference external" href="https://github.com/MOCAP4ROS2-Project/mocap4ros2_optitrack">Optitrack</a>, and <a class="reference external" href="https://github.com/MOCAP4ROS2-Project/mocap4ros2_qualisys">Qualisys</a>.
+* <a class="reference external" href="https://github.com/MOCAP4ROS2-Project/mocap_interfaces">Standard interfaces</a> for Motion capture data: Markers and RigidBodies
+* <a class="reference external" href="https://github.com/MOCAP4ROS2-Project/mocap4r2/tree/rolling/mocap4r2_control/mocap4r2_control_msgs">Interfaces for control</a> mocap systems.
+* ROS 2 Tools for controlling mocap sytems: <a class="reference external" href="https://github.com/MOCAP4ROS2-Project/mocap4r2/tree/rolling/mocap4r2_control/rqt_mocap4r2_control">RQT-based GUI</a> and <a class="reference external" href="https://github.com/MOCAP4ROS2-Project/mocap4r2/tree/rolling/mocap4r2cli">mocap4r2cli</a>, a MOCAP4ROS2 extension for <a class="reference external" href="https://github.com/ros2/ros2cli">roscli</a>.
+* <a class="reference external" href="https://github.com/MOCAP4ROS2-Project/mocap4r2/tree/rolling/mocap4r2_marker_viz">App for visualizing</a> mocap data as visual markers.
+* <a class="reference external" href="https://github.com/MOCAP4ROS2-Project/mocap4r2/tree/rolling/mocap4r2_robot_gt">App for Groud Truth</a> data for robotic experiments.
+* A <a class="reference external" href="https://github.com/MOCAP4ROS2-Project/mocap4r2/tree/rolling/mocap4r2_dummy_driver">Dummy mocap system</a> for helping developers to create tools and apps.</p>
+<p>To learn more about this project, such as related projects, and maintainers, see <a class="reference internal" href="about/index.html#about"><span class="std std-ref">About and Contact</span></a>.</p>
+<p>We hope that this software helps to include MOCAP in more Robotics projects, offering simple and powerful software to
+generate intelligent behaviors for robots.</p>
+<p>We want to invite you to contribute to this <a class="reference external" href="https://github.com/MOCAP4ROS2-Project">Open Source project in GitHub</a> !!</p>
 <div class="toctree-wrapper compound">
 </div>
 </section>
