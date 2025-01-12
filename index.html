@@ -1,26 +1,21 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MOCAP4ROS2 &mdash; ROS2 MOCAP System 1.0.0 documentation</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
-      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
-    <link rel="shortcut icon" href="_static/mocap4ros2_48x48.png"/>
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=86f27845" />
+      <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=eafc0fe6" />
+
   
-        <script src="_static/jquery.js?v=5d32c60e"></script>
+  
+        <script src="_static/jquery.js?v=8dae8fb0"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
         <script src="_static/documentation_options.js?v=8d563738"></script>
-        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
-        <script src="_static/clipboard.min.js?v=a7894cd8"></script>
-        <script src="_static/copybutton.js?v=17dd6af4"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -41,7 +36,6 @@
           
           <a href="#" class="icon icon-home">
             ROS2 MOCAP System
-              <img src="_static/mocap4ros2_logo.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
                 latest
@@ -57,26 +51,11 @@
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="getting_started/index.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="build_instructions/index.html">Build and Install</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="build_instructions/index.html#optitrack-system">OptiTrack System</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="build_instructions/index.html#configuration">Configuration</a></li>
-<li class="toctree-l3"><a class="reference internal" href="build_instructions/index.html#launching">Launching</a></li>
-<li class="toctree-l3"><a class="reference internal" href="build_instructions/index.html#visualization">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="build_instructions/index.html#optitrack-system">Optitrack System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="build_instructions/index.html#vicon-system">Vicon System</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="build_instructions/index.html#vicon-system">Vicon System</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="build_instructions/index.html#id1">Configuration</a></li>
-<li class="toctree-l3"><a class="reference internal" href="build_instructions/index.html#id2">Launching</a></li>
-<li class="toctree-l3"><a class="reference internal" href="build_instructions/index.html#id3">Visualization</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="design/index.html">Mocap4r2 design</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="design/index.html#overview">Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="design/index.html#key-design-components">Key Design Components</a></li>
-<li class="toctree-l2"><a class="reference internal" href="design/index.html#layer-interactions">Layer Interactions</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="design/index.html">MOCAP4ROS2 design</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tutorials/index.html">Tutorials</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="tutorials/index.html#optitrack-system">Optitrack system</a></li>
 </ul>
@@ -131,16 +110,35 @@
 <p>MOCAP4ROS2 is a Focused Technical Project funded initially by ROSIN. Its goal is to standardize the Motion Capture (mocap in short) Systems by providing standard interfaces that any mocap driver should respect when publishing its data and any mocap application could expect. MOCAP4ROS2 also provides tools to monitorize and control one or many mocap system running at the same time.</p>
 <p>MOCAP4ROS2 features:
 * Support for major mocap vendors: <a class="reference external" href="https://github.com/MOCAP4ROS2-Project/mocap4ros2_vicon">Vicon</a>, <a class="reference external" href="https://github.com/MOCAP4ROS2-Project/mocap4ros2_optitrack">Optitrack</a>, and <a class="reference external" href="https://github.com/MOCAP4ROS2-Project/mocap4ros2_qualisys">Qualisys</a>.
-* <a class="reference external" href="https://github.com/MOCAP4ROS2-Project/mocap_interfaces">Standard interfaces</a> for Motion capture data: Markers and RigidBodies
+* <a class="reference external" href="https://github.com/MOCAP4ROS2-Project/mocap4r2_msgs">Standard interfaces</a> for Motion capture data: Markers and RigidBodies
 * <a class="reference external" href="https://github.com/MOCAP4ROS2-Project/mocap4r2/tree/rolling/mocap4r2_control/mocap4r2_control_msgs">Interfaces for control</a> mocap systems.
 * ROS 2 Tools for controlling mocap sytems: <a class="reference external" href="https://github.com/MOCAP4ROS2-Project/mocap4r2/tree/rolling/mocap4r2_control/rqt_mocap4r2_control">RQT-based GUI</a> and <a class="reference external" href="https://github.com/MOCAP4ROS2-Project/mocap4r2/tree/rolling/mocap4r2cli">mocap4r2cli</a>, a MOCAP4ROS2 extension for <a class="reference external" href="https://github.com/ros2/ros2cli">roscli</a>.
-* <a class="reference external" href="https://github.com/MOCAP4ROS2-Project/mocap4r2/tree/rolling/mocap4r2_marker_viz">App for visualizing</a> mocap data as visual markers.
-* <a class="reference external" href="https://github.com/MOCAP4ROS2-Project/mocap4r2/tree/rolling/mocap4r2_robot_gt">App for Groud Truth</a> data for robotic experiments.
+* <cite>App for visualizing &lt;https://github.com/MOCAP4ROS2-Project/mocap4r2/tree/rolling/mocap4r2_marker_viz&gt;`_</cite> mocap data as visual markers.
+* <cite>App for Groud Truth &lt;https://github.com/MOCAP4ROS2-Project/mocap4r2/tree/rolling/mocap4r2_robot_gt&gt;`_</cite> data for robotic experiments.
 * A <a class="reference external" href="https://github.com/MOCAP4ROS2-Project/mocap4r2/tree/rolling/mocap4r2_dummy_driver">Dummy mocap system</a> for helping developers to create tools and apps.</p>
 <p>To learn more about this project, such as related projects, and maintainers, see <a class="reference internal" href="about/index.html#about"><span class="std std-ref">About and Contact</span></a>.</p>
 <p>We hope that this software helps to include MOCAP in more Robotics projects, offering simple and powerful software to
 generate intelligent behaviors for robots.</p>
 <p>We want to invite you to contribute to this <a class="reference external" href="https://github.com/MOCAP4ROS2-Project">Open Source project in GitHub</a> !!</p>
+<p>If you use this software, consider citing our work;</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">@inproceedings{10.1145/3555051.3555076,</span>
+<span class="go">    author = {Martin, Francisco and Guerrero, Jose Miguel and Garcia, A. Alberto and Rodriguez, Francisco and Matellan, Vicente},</span>
+<span class="go">    title = {MOCAP4ROS2: An Open Source Framework for Motion Capture Systems in Robotics},</span>
+<span class="go">    year = {2022},</span>
+<span class="go">    isbn = {9781450398459},</span>
+<span class="go">    publisher = {Association for Computing Machinery},</span>
+<span class="go">    address = {New York, NY, USA},</span>
+<span class="go">    url = {https://doi.org/10.1145/3555051.3555076},</span>
+<span class="go">    doi = {10.1145/3555051.3555076},</span>
+<span class="go">    booktitle = {Proceedings of the 18th International Symposium on Open Collaboration},</span>
+<span class="go">    articleno = {6},</span>
+<span class="go">    numpages = {3},</span>
+<span class="go">    keywords = {Open Source Robotics, Open Frameworks., Motion Capture Systems},</span>
+<span class="go">    location = {Madrid, Spain},</span>
+<span class="go">    series = {OpenSym &#39;22}</span>
+<span class="go">}</span>
+</pre></div>
+</div>
 <div class="toctree-wrapper compound">
 </div>
 </section>
