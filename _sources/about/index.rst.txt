@@ -27,7 +27,7 @@ Our current leadership team includes:
 +--------------------------------+-----------------------------+--------------------+---------------+
 | Manuel Fernández               | University of Málaga        | MFernandezCarmona_ | Dev team      |
 +--------------------------------+-----------------------------+--------------------+---------------+
-| Juan Carlos Manzanares Serrano | Rey Juan Carlos University  | Juancams           | Dev team      |
+| Juan Carlos Manzanares Serrano | Rey Juan Carlos University  | Juancams_          | Dev team      |
 +--------------------------------+-----------------------------+--------------------+---------------+
 
 .. _fmrico: https://github.com/fmrico
