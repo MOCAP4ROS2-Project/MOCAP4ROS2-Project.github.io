@@ -39,3 +39,20 @@ default) configure the simulated Motive.
 
 The plugin does not publish while the simulation is paused, restarts its frame numbers
 when the simulation is reset, and stamps the data with the simulation time.
+
+Demos
+*****
+
+``mocap4r2_gz_demos`` has two ready-made scenarios:
+
+.. code-block:: console
+
+   $ ros2 launch mocap4r2_gz_demos robot_groundtruth.launch.py system:=ros
+   $ ros2 launch mocap4r2_gz_demos robot_groundtruth.launch.py system:=optitrack
+   $ ros2 launch mocap4r2_gz_demos human_motion.launch.py
+
+* **Robot ground truth**: a robot with a marker plate drives in circles; ``robot_gt``
+  publishes ``base_link_gt``. With ``system:=optitrack`` Gazebo plays Motive and the real
+  OptiTrack driver connects to it, as in the lab.
+* **Human motion**: a walking mannequin streamed as a skeleton (and its head as a rigid
+  body); ``skeleton_publisher`` publishes its segments as TF and its joint angles.
