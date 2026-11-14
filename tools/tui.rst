@@ -27,3 +27,10 @@ and the counts of labeled, unlabeled and occluded markers.
      - quit
 
 It works over SSH, in the robot or in the mocap room computer.
+
+.. note::
+
+   The TUI uses Textual, included in the package. On Humble (Ubuntu 22.04) the system
+   Python packages are too old for it; install a newer Textual with
+   ``pip install --user 'textual>=6'``. The rest of ``ros2 mocap4r2`` works with the
+   system packages on every distribution.
