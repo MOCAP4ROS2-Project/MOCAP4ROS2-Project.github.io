@@ -1,0 +1,6 @@
+{
+  "default": "latest",
+  "versions": [
+    {"name": "latest", "ref": "HEAD", "title": "latest (development)"}
+  ]
+}
