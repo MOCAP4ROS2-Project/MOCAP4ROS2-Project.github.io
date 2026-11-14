@@ -9,7 +9,7 @@ Repositories
 
    * - Repository
      - Packages
-   * - :repo:`mocap4r2_msgs`
+   * - :repo:`mocap4r2_interfaces`
      - ``mocap4r2_interfaces``
    * - :repo:`mocap4r2`
      - ``mocap4r2_control``, ``mocap4r2_sim_driver``, ``mocap4r2_marker_viz``,

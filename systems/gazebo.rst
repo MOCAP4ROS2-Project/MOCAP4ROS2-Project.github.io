@@ -12,7 +12,7 @@ frames
 
 .. code-block:: console
 
-   $ ros2 launch mocap4r2_gz_plugin mocap_room.launch.py
+   $ ros2 launch mocap4r2_gz_plugin mocap_room.launch.yaml
 
 Configuration (in the world SDF):
 
@@ -47,9 +47,9 @@ Demos
 
 .. code-block:: console
 
-   $ ros2 launch mocap4r2_gz_demos robot_groundtruth.launch.py system:=ros
-   $ ros2 launch mocap4r2_gz_demos robot_groundtruth.launch.py system:=optitrack
-   $ ros2 launch mocap4r2_gz_demos human_motion.launch.py
+   $ ros2 launch mocap4r2_gz_demos robot_groundtruth.launch.yaml system:=ros
+   $ ros2 launch mocap4r2_gz_demos robot_groundtruth.launch.yaml system:=optitrack
+   $ ros2 launch mocap4r2_gz_demos human_motion.launch.yaml
 
 * **Robot ground truth**: a robot with a marker plate drives in circles; ``robot_gt``
   publishes ``base_link_gt``. With ``system:=optitrack`` Gazebo plays Motive and the real

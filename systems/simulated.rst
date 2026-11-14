@@ -7,7 +7,7 @@ applications or test a pipeline in CI.
 
 .. code-block:: console
 
-   $ ros2 launch mocap4r2_sim_driver sim_driver.launch.py autostart:=activate
+   $ ros2 launch mocap4r2_sim_driver sim_driver.launch.yaml autostart:=activate
 
 .. list-table::
    :header-rows: 1

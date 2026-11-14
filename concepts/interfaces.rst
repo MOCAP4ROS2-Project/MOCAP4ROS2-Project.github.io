@@ -1,7 +1,7 @@
 Interfaces
 ##########
 
-Package ``mocap4r2_interfaces`` (it replaces ``mocap4r2_msgs`` of 1.x; Open Robotics
+Package ``mocap4r2_interfaces``, repository :repo:`mocap4r2_interfaces` (they replace ``mocap4r2_msgs`` of 1.x; Open Robotics
 reserves the ``mocap_*`` names, so every MOCAP4ROS2 package starts with ``mocap4r2_``).
 
 Identifiers are stable: they come from the mocap system (never from the position in

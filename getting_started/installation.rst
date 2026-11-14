@@ -61,7 +61,7 @@ From source
 .. code-block:: console
 
    $ mkdir -p ~/mocap_ws/src && cd ~/mocap_ws/src
-   $ git clone https://github.com/MOCAP4ROS2-Project/mocap4r2_msgs.git
+   $ git clone https://github.com/MOCAP4ROS2-Project/mocap4r2_interfaces.git
    $ git clone https://github.com/MOCAP4ROS2-Project/mocap4r2.git
    $ git clone https://github.com/MOCAP4ROS2-Project/mocap4ros2_optitrack.git   # your system
    $ cd ~/mocap_ws

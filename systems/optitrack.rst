@@ -6,7 +6,7 @@ of OptiTrack.
 
 .. code-block:: console
 
-   $ ros2 launch mocap4r2_optitrack_driver optitrack_driver.launch.py \
+   $ ros2 launch mocap4r2_optitrack_driver optitrack_driver.launch.yaml \
        params_file:=my_optitrack.yaml
    $ ros2 mocap4r2 start optitrack_driver
 
@@ -143,7 +143,7 @@ any NatNet version:
 .. code-block:: console
 
    $ ros2 run mocap4r2_optitrack_driver natnet_simulator --bodies 2 --rate 120
-   $ ros2 launch mocap4r2_optitrack_driver optitrack_driver.launch.py autostart:=activate
+   $ ros2 launch mocap4r2_optitrack_driver optitrack_driver.launch.yaml autostart:=activate
 
 (``--multicast``, ``--version 4.1``, ``--up-axis z``... see ``--help``). The Gazebo
 plugin can also play Motive: :doc:`gazebo`.

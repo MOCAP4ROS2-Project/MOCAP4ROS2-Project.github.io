@@ -28,7 +28,7 @@ above) and create a rigid body in the mocap software, for example ``robot``. Che
 
 .. code-block:: console
 
-   $ ros2 launch mocap4r2_robot_gt robot_gt.launch.py params_file:=robot_gt.yaml
+   $ ros2 launch mocap4r2_robot_gt robot_gt.launch.yaml params_file:=robot_gt.yaml
 
 It publishes TF ``mocap -> gt_origin -> base_link_gt``, ``~/pose`` and ``~/odom``
 (``nav_msgs/Odometry`` with velocities in the robot frame, filtered with
@@ -78,7 +78,7 @@ which suits robots on a floor.
 
 .. code-block:: console
 
-   $ ros2 launch mocap4r2_gt_tools gt_evaluation.launch.py output_dir:=run1
+   $ ros2 launch mocap4r2_gt_tools gt_evaluation.launch.yaml output_dir:=run1
 
 ``gt_evaluator`` samples both trajectories at the same instants (TF interpolation)
 and publishes on ``~/error`` (``TrajectoryError``) the ATE (after alignment, unless

@@ -32,7 +32,7 @@ with the mocap systems and its topics are recorded with them.
 
 .. code-block:: console
 
-   $ ros2 launch mocap4r2_control auxiliar.launch.py params_file:=emg.yaml
+   $ ros2 launch mocap4r2_control auxiliar.launch.yaml params_file:=emg.yaml
 
 From C++, derive from ``mocap4r2_control::MocapSystemNode`` to react to the start and
 stop of each session (``on_control_start``/``on_control_stop`` receive the session id).

@@ -9,7 +9,7 @@ driver does.
 
    .. code-block:: console
 
-      $ ros2 launch mocap4r2_sim_driver sim_driver.launch.py
+      $ ros2 launch mocap4r2_sim_driver sim_driver.launch.yaml
 
 2. In another terminal, list the systems and start it:
 
@@ -27,7 +27,7 @@ driver does.
 
       $ ros2 mocap4r2 hz
       $ ros2 mocap4r2 bodies sim_driver
-      $ ros2 launch mocap4r2_marker_viz marker_viz.launch.py
+      $ ros2 launch mocap4r2_marker_viz marker_viz.launch.yaml
 
 4. Or open the terminal UI, where ``s``/``x`` start and stop the selected system:
 

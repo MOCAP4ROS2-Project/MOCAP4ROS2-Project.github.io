@@ -6,7 +6,7 @@ included in the package.
 
 .. code-block:: console
 
-   $ ros2 launch mocap4r2_qualisys_driver qualisys_driver.launch.py \
+   $ ros2 launch mocap4r2_qualisys_driver qualisys_driver.launch.yaml \
        params_file:=my_qualisys.yaml
    $ ros2 mocap4r2 start qualisys_driver
 

@@ -7,7 +7,7 @@ arm64.
 
 .. code-block:: console
 
-   $ ros2 launch mocap4r2_vicon_driver vicon_driver.launch.py params_file:=my_vicon.yaml
+   $ ros2 launch mocap4r2_vicon_driver vicon_driver.launch.yaml params_file:=my_vicon.yaml
    $ ros2 mocap4r2 start vicon_driver
 
 Enable the DataStream in the Vicon software (it listens on port 801 by default).

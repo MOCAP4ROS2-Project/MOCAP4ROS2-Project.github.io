@@ -3,7 +3,7 @@ RViz
 
 .. code-block:: console
 
-   $ ros2 launch mocap4r2_marker_viz marker_viz.launch.py namespace:=lab
+   $ ros2 launch mocap4r2_marker_viz marker_viz.launch.yaml namespace:=lab
 
 ``mocap4r2_marker_viz`` turns the data of a system into ``mocap_viz``
 (``MarkerArray``): labeled markers (green), unlabeled (white), occluded (red,
