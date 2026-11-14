@@ -34,9 +34,9 @@ Team
      - Rey Juan Carlos University
      - `jmguerreroh <https://github.com/jmguerreroh>`_
      - Developer
-   * - Manuel Fernández Carmona
-     - University of Málaga
-     - `MFernandezCarmona <https://github.com/MFernandezCarmona>`_
+   * - Francisco Miguel Moreno Olivo
+     - Rey Juan Carlos University
+     - `butakus <https://github.com/butakus>`_
      - Developer
 
 Thanks to every contributor of code, issues and testing.
