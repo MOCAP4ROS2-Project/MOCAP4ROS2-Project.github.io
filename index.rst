@@ -1,48 +1,73 @@
-.. _documentation_home:
+:layout: landing
 
-*****
-|LPN|
-*****
-.. raw:: html
+MOCAP4ROS2
+##########
 
-    <h1 align="center">
-      <div>
-        <div style="position: relative; padding-bottom: 0%; overflow: hidden; max-width: 100%; height: auto;">
-          <iframe width="450" height="300" src="https://www.youtube-nocookie.com/embed/C8DI6OonV7Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          <iframe width="450" height="300" src="https://www.youtube-nocookie.com/embed/Z5kRd4MLgFU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-      </div>
-    </h1>
+.. rst-class:: lead
 
-Overview
-########
+   Motion capture for ROS 2: one interface for OptiTrack, Vicon, Qualisys and Gazebo,
+   and tools that work with all of them — ground truth for robots, human motion
+   analysis, recording and monitoring.
 
-MOCAP4ROS2 is a Focused Technical Project funded initially by ROSIN. Its goal is to standardize the Motion Capture (mocap in short) Systems by providing standard interfaces that any mocap driver should respect when publishing its data and any mocap application could expect. MOCAP4ROS2 also provides tools to monitorize and control one or many mocap system running at the same time.
+.. container:: buttons
 
-MOCAP4ROS2 features:
-* Support for major mocap vendors: `Vicon <https://github.com/MOCAP4ROS2-Project/mocap4ros2_vicon>`_, `Optitrack <https://github.com/MOCAP4ROS2-Project/mocap4ros2_optitrack>`_, and `Qualisys <https://github.com/MOCAP4ROS2-Project/mocap4ros2_qualisys>`_.
-* `Standard interfaces <https://github.com/MOCAP4ROS2-Project/mocap4r2_msgs>`_ for Motion capture data: Markers and RigidBodies
-* `Interfaces for control <https://github.com/MOCAP4ROS2-Project/mocap4r2/tree/rolling/mocap4r2_control/mocap4r2_control_msgs>`_ mocap systems.
-* ROS 2 Tools for controlling mocap sytems: `RQT-based GUI <https://github.com/MOCAP4ROS2-Project/mocap4r2/tree/rolling/mocap4r2_control/rqt_mocap4r2_control>`_ and `mocap4r2cli <https://github.com/MOCAP4ROS2-Project/mocap4r2/tree/rolling/mocap4r2cli>`__, a MOCAP4ROS2 extension for `roscli <https://github.com/ros2/ros2cli>`__. 
-* `App for visualizing <https://github.com/MOCAP4ROS2-Project/mocap4r2/tree/rolling/mocap4r2_marker_viz>`_` mocap data as visual markers. 
-* `App for Groud Truth <https://github.com/MOCAP4ROS2-Project/mocap4r2/tree/rolling/mocap4r2_robot_gt>`_` data for robotic experiments. 
-* A `Dummy mocap system <https://github.com/MOCAP4ROS2-Project/mocap4r2/tree/rolling/mocap4r2_dummy_driver>`_ for helping developers to create tools and apps.
+   `Get started <getting_started/index.html>`_
+   `GitHub <https://github.com/MOCAP4ROS2-Project>`_
 
-To learn more about this project, such as related projects, and maintainers, see :ref:`about`.
+.. grid:: 1 1 2 3
+   :gutter: 2
+   :padding: 0
+   :class-row: surface
 
-We hope that this software helps to include MOCAP in more Robotics projects, offering simple and powerful software to 
-generate intelligent behaviors for robots.
+   .. grid-item-card:: :octicon:`plug` Drivers for real systems
+      :link: systems/index
+      :link-type: doc
 
-We want to invite you to contribute to this `Open Source project in GitHub <https://github.com/MOCAP4ROS2-Project>`_ !!
+      OptiTrack (official NatNet SDK or open implementation), Vicon DataStream 1.13,
+      Qualisys QTM, plus a simulated system and a Gazebo plugin.
 
+   .. grid-item-card:: :octicon:`git-branch` One interface
+      :link: concepts/architecture
+      :link-type: doc
 
+      Markers, rigid bodies and skeletons with tracking validity, stable ids and one
+      frame convention, whatever the system.
+
+   .. grid-item-card:: :octicon:`location` Robot ground truth
+      :link: guides/robot_groundtruth
+      :link-type: doc
+
+      A TF tree parallel to your robot's, body calibration, map alignment and online
+      ATE/RPE with export for evo.
+
+   .. grid-item-card:: :octicon:`person` Human motion
+      :link: guides/human_motion
+      :link-type: doc
+
+      Skeletons as TF and joint angles, zero-phase filtering, gap filling and C3D
+      export for biomechanics software.
+
+   .. grid-item-card:: :octicon:`terminal` CLI and terminal UI
+      :link: tools/index
+      :link-type: doc
+
+      ``ros2 mocap4r2`` lists, starts, stops, records and diagnoses every system;
+      the TUI shows rates, latency and tracking live.
+
+   .. grid-item-card:: :octicon:`code` Add your system
+      :link: developer/new_driver
+      :link-type: doc
+
+      A driver only translates its system into the MOCAP4ROS2 interfaces: every
+      tool works with it from the first frame.
 
 .. toctree::
    :hidden:
 
-   getting_started/index.rst
-   build_instructions/index.rst
-   design/index.rst
-   tutorials/index.rst
-   about/index.rst
-   
+   getting_started/index
+   concepts/index
+   systems/index
+   guides/index
+   tools/index
+   developer/index
+   about/index

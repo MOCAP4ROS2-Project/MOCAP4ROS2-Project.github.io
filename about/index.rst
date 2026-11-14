@@ -1,42 +1,51 @@
-.. _about:
-
-About and Contact
-#################
-
 About
-*****
+#####
 
-MOCAP4ROS2 Project provides support for ROS2 integration with Optitrack and Vicon cameras (MOCAP systems based on vision) and Technaid TechMCS IMUs (MOCAP systems based on motion sensors).
+MOCAP4ROS2 integrates motion capture systems in ROS 2. It started as a Focused
+Technical Project of `ROSIN <https://www.rosin-project.eu/>`_ and is developed at the
+`Intelligent Robotics Lab <https://intelligentroboticslab.gsyc.urjc.es/>`_ of Rey
+Juan Carlos University.
 
+.. image:: /images/mocap4r2_logo.png
+   :width: 360
+   :alt: MOCAP4ROS2, a ROSIN project
 
-We strive to create an open community and encourage new ROS users and experts alike to collaborate.
-However, that can't happen without your issues, pull requests, and support.
-MOCAP4ROS2, like all open-source projects, is kept going by a dedicated group of developers, maintainers, users, and collaborators.
-We would like to thank here our current and past contributors and maintainers.
+Team
+****
 
-If you or your organization are interested in sponsoring PlanSys2 or any work around it, please reach out to the current project lead.
+.. list-table::
+   :header-rows: 1
 
-Our current leadership team includes:
+   * - Name
+     - Organization
+     - GitHub
+     - Role
+   * - Francisco Martín Rico
+     - Rey Juan Carlos University
+     - `fmrico <https://github.com/fmrico>`_
+     - Project lead
+   * - José Miguel Guerrero
+     - Rey Juan Carlos University
+     - `jmguerreroh <https://github.com/jmguerreroh>`_
+     - Developer
+   * - Manuel Fernández Carmona
+     - University of Málaga
+     - `MFernandezCarmona <https://github.com/MFernandezCarmona>`_
+     - Developer
 
-+----------------------+-----------------------------+--------------------+---------------+
-| Name                 | Organization                | GitHub ID          | Current Role  |
-+======================+=============================+====================+===============+
-| Francisco Martín     | Rey Juan Carlos University  | fmrico_            | Project Lead  |
-+----------------------+-----------------------------+--------------------+---------------+
-| José Miguel Guerrero | Rey Juan Carlos University  | jmguerreroh_       | Dev team      |
-+----------------------+-----------------------------+--------------------+---------------+
-| Manuel Fernández     | University of Málaga        | MFernandezCarmona_ | Dev team      |
-+----------------------+-----------------------------+--------------------+---------------+
+Thanks to every contributor of code, issues and testing.
 
-.. _fmrico: https://github.com/fmrico
-.. _jmguerreroh: https://github.com/jmguerreroh
-.. _MFernandezCarmona: https://github.com/MFernandezCarmona
-
-Contact
+License
 *******
 
-If you are interested in contacting someone about MOCAP, ROS 2, or related projects, please email the project leader.
-We intentionally make our emails easy to find.
-If your inquiry relates to bugs or open-source feature requests, consider posting a ticket on our GitHub project.
-If your inquiry relates to configuration support or private feature development, reach out and we may be able to connect you with
-independent consultants or contractors that know this project well.
+MOCAP4ROS2 is released under the Apache 2.0 license. The Vicon DataStream SDK and the
+Qualisys C++ SDK included in the drivers are MIT licensed (TinyXML-2, used by the
+Qualisys SDK, is zlib licensed). The official OptiTrack NatNet SDK is not included;
+it is governed by the OptiTrack Plugins EULA.
+
+Funding
+*******
+
+Supported by ROSIN - ROS-Industrial Quality-Assured Robot Software Components. This
+project has received funding from the European Union's Horizon 2020 research and
+innovation programme under grant agreement no. 732287.

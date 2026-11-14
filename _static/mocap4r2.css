@@ -1,0 +1,19 @@
+/* MOCAP4ROS2 additions to the Shibuya theme. */
+.mocap4r2-version {
+  margin-left: 0.75rem;
+  padding: 0.15rem 0.4rem;
+  border: 1px solid var(--sy-c-border, #ccc);
+  border-radius: 6px;
+  background: transparent;
+  color: inherit;
+  font-size: 0.8rem;
+}
+
+.mocap4r2-hero img {
+  max-width: 420px;
+  width: 100%;
+}
+
+table.docutils td, table.docutils th {
+  vertical-align: top;
+}
