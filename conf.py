@@ -39,7 +39,7 @@ html_favicon = 'images/favicon-48x48.png'
 html_static_path = ['_static', 'images/mocap4r2_symbol_light.png',
                     'images/mocap4r2_symbol_dark.png', 'images/apple-touch-icon.png']
 html_css_files = ['mocap4r2.css']
-html_js_files = ['version_switcher.js']
+html_js_files = ['version_switcher.js', 'repo_cards.js']
 html_baseurl = 'https://mocap4ros2-project.github.io/'
 html_theme_options = {
     'accent_color': 'red',

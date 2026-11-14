@@ -1,0 +1,26 @@
+{#- MOCAP4ROS2: the main repository and one per mocap system, instead of the single
+    repository card of the theme. Stars and forks are filled by _static/repo_cards.js. -#}
+{%- set repos = [
+  ("mocap4r2", "MOCAP4ROS2 core and tools"),
+  ("mocap4ros2_optitrack", "OptiTrack"),
+  ("mocap4ros2_vicon", "Vicon"),
+  ("mocap4ros2_qualisys", "Qualisys"),
+  ("mocap4ros2_gazebo", "Gazebo"),
+] -%}
+<div class="mocap4r2-repos">
+  <p class="mocap4r2-repos-title">Repositories</p>
+  {%- for name, label in repos %}
+  <a class="mocap4r2-repo{% if loop.first %} mocap4r2-repo-main{% endif %}"
+     href="https://github.com/MOCAP4ROS2-Project/{{ name }}" data-repo="{{ name }}">
+    <iconify-icon icon="simple-icons:github" class="mocap4r2-repo-icon"></iconify-icon>
+    <span class="mocap4r2-repo-text">
+      <span class="mocap4r2-repo-label">{{ label }}</span>
+      <span class="mocap4r2-repo-name">{{ name }}</span>
+      <span class="mocap4r2-repo-count">
+        <iconify-icon icon="lucide:star"></iconify-icon><strong data-stars>–</strong>
+        <iconify-icon icon="lucide:git-fork"></iconify-icon><strong data-forks>–</strong>
+      </span>
+    </span>
+  </a>
+  {%- endfor %}
+</div>
