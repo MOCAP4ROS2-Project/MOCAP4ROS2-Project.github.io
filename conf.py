@@ -35,14 +35,16 @@ language = 'en'
 
 html_theme = 'shibuya'
 html_title = 'MOCAP4ROS2'
-html_logo = 'images/mocap4r2_48x48.png'
 html_favicon = 'images/favicon-48x48.png'
-html_static_path = ['_static']
+html_static_path = ['_static', 'images/mocap4r2_symbol_light.png',
+                    'images/mocap4r2_symbol_dark.png', 'images/apple-touch-icon.png']
 html_css_files = ['mocap4r2.css']
 html_js_files = ['version_switcher.js']
 html_baseurl = 'https://mocap4ros2-project.github.io/'
 html_theme_options = {
     'accent_color': 'red',
+    'light_logo': '_static/mocap4r2_symbol_light.png',
+    'dark_logo': '_static/mocap4r2_symbol_dark.png',
     'github_url': 'https://github.com/MOCAP4ROS2-Project',
     'nav_links': [
         {'title': 'Get started', 'url': 'getting_started/index'},

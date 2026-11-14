@@ -9,9 +9,24 @@
   font-size: 0.8rem;
 }
 
+/* Landing: the logo replaces the text title (kept for <title> and search). */
+section:has(> .mocap4r2-hero) > h1 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
 .mocap4r2-hero img {
-  max-width: 420px;
+  max-width: 640px;
   width: 100%;
+  margin: 0 0 1.5rem -0.75rem;
+}
+
+.sy-head-brand img {
+  height: 2rem;
+  width: auto;
 }
 
 table.docutils td, table.docutils th {

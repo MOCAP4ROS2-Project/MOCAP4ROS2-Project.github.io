@@ -3,6 +3,16 @@
 MOCAP4ROS2
 ##########
 
+.. container:: mocap4r2-hero
+
+   .. image:: /images/mocap4r2_logo_light.png
+      :alt: MOCAP4ROS2
+      :class: light-only
+
+   .. image:: /images/mocap4r2_logo_dark.png
+      :alt: MOCAP4ROS2
+      :class: dark-only
+
 .. rst-class:: lead
 
    Motion capture for ROS 2: one interface for OptiTrack, Vicon, Qualisys and Gazebo,

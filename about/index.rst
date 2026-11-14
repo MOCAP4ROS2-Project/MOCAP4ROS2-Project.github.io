@@ -6,9 +6,15 @@ Technical Project of `ROSIN <https://www.rosin-project.eu/>`_ and is developed a
 `Intelligent Robotics Lab <https://intelligentroboticslab.gsyc.urjc.es/>`_ of Rey
 Juan Carlos University.
 
-.. image:: /images/mocap4r2_logo.png
-   :width: 360
-   :alt: MOCAP4ROS2, a ROSIN project
+.. image:: /images/mocap4r2_logo_light.png
+   :width: 420
+   :alt: MOCAP4ROS2
+   :class: light-only
+
+.. image:: /images/mocap4r2_logo_dark.png
+   :width: 420
+   :alt: MOCAP4ROS2
+   :class: dark-only
 
 Team
 ****
