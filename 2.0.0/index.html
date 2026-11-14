@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en" data-accent-color="red" data-content_root="./">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>MOCAP4ROS2</title><link rel="shortcut icon" href="_static/favicon-48x48.png"/><link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Get started" href="getting_started/index.html" />
+      <link rel="canonical" href="https://mocap4ros2-project.github.io/" /><script>
+    function setColorMode(t){let e=document.documentElement;e.setAttribute("data-color-mode",t);let a=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,s=t;"auto"===t&&(s=a?"dark":"light"),"light"===s?(e.classList.remove("dark"),e.classList.add("light")):(e.classList.remove("light"),e.classList.add("dark"))}
+    setColorMode(localStorage._theme||"auto");
+  </script><link rel="stylesheet" type="text/css" href="_static/pygments.css?v=e1a1ceaf" />
+    <link rel="stylesheet" type="text/css" href="_static/shibuya.css?v=2ceb65ce" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=6a604523" />
+    <link media="print" rel="stylesheet" type="text/css" href="_static/print.css?v=20ff2c19" />
+    <link rel="stylesheet" type="text/css" href="_static/mocap4r2.css?v=f36a4cca" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --sy-f-text: "Inter", var(--sy-f-sys), var(--sy-f-cjk), sans-serif;
+  --sy-f-heading: "Inter", var(--sy-f-sys), var(--sy-f-cjk), sans-serif;
+}
+</style>
+    
+<style>
+  .yue {
+    padding-bottom: 2rem;
+  }
+  .yue section:first-of-type h1 {
+    font-size: 4.2rem;
+    margin-top: 3.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .injected,
+  .yue a.headerlink {
+    display: none;
+  }
+  
+</style>
+
+  
+  
+  <link rel="apple-touch-icon" href="_static/apple-touch-icon.png">
+  <link rel="icon" href="_static/favicon.ico" sizes="any">
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://mocap4ros2-project.github.io/"/>
+  <meta property="og:title" content="MOCAP4ROS2"/>
+    <meta name="twitter:card" content="summary"/></head>
+<body><div class="sy-head">
+  <div class="sy-head-blur"></div>
+  <div class="sy-head-inner sy-container mx-auto">
+    <a class="sy-head-brand" href="#">
+      <img class="light-logo" src="_static/mocap4r2_symbol_light.png" alt="MOCAP4ROS2" height="28" loading="lazy" />
+      <img class="dark-logo" src="_static/mocap4r2_symbol_dark.png" alt="MOCAP4ROS2" height="28" loading="lazy" />
+      <strong>MOCAP4ROS2</strong>
+    </a>
+    <div class="sy-head-nav" id="head-nav">
+      <nav class="sy-head-links"><ul><li class="link"><a href="getting_started/index.html">Get started</a></li><li class="link"><a href="systems/index.html">Systems</a></li><li class="link"><a href="guides/index.html">Guides</a></li><li class="link"><a href="tools/index.html">Tools</a></li><li class="link"><a href="developer/index.html">Developers</a></li></ul></nav>
+      <div class="sy-head-extra flex items-center print:hidden"><form class="searchbox flex items-center" action="search.html" method="get">
+  <input type="text" name="q" placeholder="Search" />
+  <kbd>/</kbd>
+</form><div class="sy-head-socials">
+  <a href="https://github.com/MOCAP4ROS2-Project" aria-label="GitHub">
+    <iconify-icon icon="simple-icons:github"></iconify-icon>
+  </a></div></div>
+    </div>
+    <div class="sy-head-actions flex items-center shrink-0 print:hidden"><button class="js-theme theme-switch flex items-center"
+data-aria-auto="Switch to light color mode"
+data-aria-light="Switch to dark color mode"
+data-aria-dark="Switch to auto color mode">
+<i class="i-lucide theme-icon"></i>
+</button><button class="md:hidden flex items-center js-menu" aria-label="Menu" type="button" aria-controls="head-nav" aria-expanded="false">
+        <div class="hamburger">
+          <span class="hamburger_1"></span>
+          <span class="hamburger_2"></span>
+          <span class="hamburger_3"></span>
+        </div>
+      </button>
+    </div>
+  </div>
+</div><div class="sy-container mx-auto body">
+    <main class="sy-content mx-auto pt-12 px-6 xl:px-12 break-words">
+      <article class="yue" role="main">
+        <section id="mocap4ros2">
+<h1>MOCAP4ROS2<a class="headerlink" href="#mocap4ros2" title="Link to this heading">#</a></h1>
+<div class="mocap4r2-hero docutils container">
+<img alt="MOCAP4ROS2" class="light-only" src="_images/mocap4r2_logo_light.png" />
+<img alt="MOCAP4ROS2" class="dark-only" src="_images/mocap4r2_logo_dark.png" />
+</div>
+<p class="lead">Motion capture for ROS 2: one interface for OptiTrack, Vicon, Qualisys and Gazebo,
+and tools that work with all of them — ground truth for robots, human motion
+analysis, recording and monitoring.</p>
+<div class="buttons docutils container">
+<p><a class="reference external" href="getting_started/index.html">Get started</a>
+<a class="reference external" href="https://github.com/MOCAP4ROS2-Project">GitHub</a></p>
+</div>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 sd-p-0 docutils">
+<div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-2 sd-row-cols-lg-3 sd-g-2 sd-g-xs-2 sd-g-sm-2 sd-g-md-2 sd-g-lg-2 surface docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+<svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-plug" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 8H2.5a1 1 0 0 0-1 1v5.25a.75.75 0 0 1-1.5 0V9a2.5 2.5 0 0 1 2.5-2.5H4V5.133a1.75 1.75 0 0 1 1.533-1.737l2.831-.353.76-.913c.332-.4.825-.63 1.344-.63h.782c.966 0 1.75.784 1.75 1.75V4h2.25a.75.75 0 0 1 0 1.5H13v4h2.25a.75.75 0 0 1 0 1.5H13v.75a1.75 1.75 0 0 1-1.75 1.75h-.782c-.519 0-1.012-.23-1.344-.63l-.761-.912-2.83-.354A1.75 1.75 0 0 1 4 9.867Zm6.276-4.91-.95 1.14a.753.753 0 0 1-.483.265l-3.124.39a.25.25 0 0 0-.219.248v4.734c0 .126.094.233.219.249l3.124.39a.752.752 0 0 1 .483.264l.95 1.14a.25.25 0 0 0 .192.09h.782a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25h-.782a.25.25 0 0 0-.192.09Z"></path></svg> Drivers for real systems</div>
+<p class="sd-card-text">OptiTrack (official NatNet SDK or open implementation), Vicon DataStream 1.13,
+Qualisys QTM, plus a simulated system and a Gazebo plugin.</p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference internal" href="systems/index.html"><span class="doc">Systems</span></a></div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+<svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-git-branch" viewBox="0 0 16 16" aria-hidden="true"><path d="M9.5 3.25a2.25 2.25 0 1 1 3 2.122V6A2.5 2.5 0 0 1 10 8.5H6a1 1 0 0 0-1 1v1.128a2.251 2.251 0 1 1-1.5 0V5.372a2.25 2.25 0 1 1 1.5 0v1.836A2.493 2.493 0 0 1 6 7h4a1 1 0 0 0 1-1v-.628A2.25 2.25 0 0 1 9.5 3.25Zm-6 0a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0Zm8.25-.75a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5ZM4.25 12a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Z"></path></svg> One interface</div>
+<p class="sd-card-text">Markers, rigid bodies and skeletons with tracking validity, stable ids and one
+frame convention, whatever the system.</p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference internal" href="concepts/architecture.html"><span class="doc">Architecture</span></a></div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+<svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-location" viewBox="0 0 16 16" aria-hidden="true"><path d="m12.596 11.596-3.535 3.536a1.5 1.5 0 0 1-2.122 0l-3.535-3.536a6.5 6.5 0 1 1 9.192-9.193 6.5 6.5 0 0 1 0 9.193Zm-1.06-8.132v-.001a5 5 0 1 0-7.072 7.072L8 14.07l3.536-3.534a5 5 0 0 0 0-7.072ZM8 9a2 2 0 1 1-.001-3.999A2 2 0 0 1 8 9Z"></path></svg> Robot ground truth</div>
+<p class="sd-card-text">A TF tree parallel to your robot’s, body calibration, map alignment and online
+ATE/RPE with export for evo.</p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference internal" href="guides/robot_groundtruth.html"><span class="doc">Ground truth for robots</span></a></div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+<svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-person" viewBox="0 0 16 16" aria-hidden="true"><path d="M10.561 8.073a6.005 6.005 0 0 1 3.432 5.142.75.75 0 1 1-1.498.07 4.5 4.5 0 0 0-8.99 0 .75.75 0 0 1-1.498-.07 6.004 6.004 0 0 1 3.431-5.142 3.999 3.999 0 1 1 5.123 0ZM10.5 5a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0Z"></path></svg> Human motion</div>
+<p class="sd-card-text">Skeletons as TF and joint angles, zero-phase filtering, gap filling and C3D
+export for biomechanics software.</p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference internal" href="guides/human_motion.html"><span class="doc">Human motion</span></a></div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+<svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-terminal" viewBox="0 0 16 16" aria-hidden="true"><path d="M0 2.75C0 1.784.784 1 1.75 1h12.5c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25Zm1.75-.25a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25V2.75a.25.25 0 0 0-.25-.25ZM7.25 8a.749.749 0 0 1-.22.53l-2.25 2.25a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L5.44 8 3.72 6.28a.749.749 0 0 1 .326-1.275.749.749 0 0 1 .734.215l2.25 2.25c.141.14.22.331.22.53Zm1.5 1.5h3a.75.75 0 0 1 0 1.5h-3a.75.75 0 0 1 0-1.5Z"></path></svg> CLI and terminal UI</div>
+<p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">mocap4r2</span></code> lists, starts, stops, records and diagnoses every system;
+the TUI shows rates, latency and tracking live.</p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference internal" href="tools/index.html"><span class="doc">Tools</span></a></div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+<svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-code" viewBox="0 0 16 16" aria-hidden="true"><path d="m11.28 3.22 4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L13.94 8l-3.72-3.72a.749.749 0 0 1 .326-1.275.749.749 0 0 1 .734.215Zm-6.56 0a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042L2.06 8l3.72 3.72a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L.47 8.53a.75.75 0 0 1 0-1.06Z"></path></svg> Add your system</div>
+<p class="sd-card-text">A driver only translates its system into the MOCAP4ROS2 interfaces: every
+tool works with it from the first frame.</p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference internal" href="developer/new_driver.html"><span class="doc">Writing a driver for a new system</span></a></div>
+</div>
+</div>
+</div>
+<section id="citing-mocap4ros2">
+<h2>Citing MOCAP4ROS2<a class="headerlink" href="#citing-mocap4ros2" title="Link to this heading">#</a></h2>
+<p>If you use MOCAP4ROS2 in your research, please cite the reference paper:</p>
+<blockquote>
+<div><p>F. Martín, J. M. Guerrero, A. García, F. Rodríguez and V. Matellán.
+<a class="reference external" href="https://doi.org/10.1145/3555051.3555076">MOCAP4ROS2: An Open Source Framework for Motion Capture Systems in Robotics</a>. <em>Proceedings of the 18th International
+Symposium on Open Collaboration (OpenSym 2022)</em>, ACM, 2022.</p>
+</div></blockquote>
+<div class="highlight-bibtex notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">martin2022mocap4ros2</span><span class="p">,</span>
+</span><span data-line="2"><span class="w">  </span><span class="na">author</span><span class="w">    </span><span class="p">=</span><span class="w"> </span><span class="s">{Mart{\'i}n, Francisco and Guerrero, Jos{\'e} Miguel and Garc{\'i}a, A. Alberto and Rodr{\'i}guez, Francisco and Matell{\'a}n, Vicente}</span><span class="p">,</span>
+</span><span data-line="3"><span class="w">  </span><span class="na">title</span><span class="w">     </span><span class="p">=</span><span class="w"> </span><span class="s">{{MOCAP4ROS2}: An Open Source Framework for Motion Capture Systems in Robotics}</span><span class="p">,</span>
+</span><span data-line="4"><span class="w">  </span><span class="na">booktitle</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{Proceedings of the 18th International Symposium on Open Collaboration}</span><span class="p">,</span>
+</span><span data-line="5"><span class="w">  </span><span class="na">series</span><span class="w">    </span><span class="p">=</span><span class="w"> </span><span class="s">{OpenSym '22}</span><span class="p">,</span>
+</span><span data-line="6"><span class="w">  </span><span class="na">pages</span><span class="w">     </span><span class="p">=</span><span class="w"> </span><span class="s">{1--3}</span><span class="p">,</span>
+</span><span data-line="7"><span class="w">  </span><span class="na">year</span><span class="w">      </span><span class="p">=</span><span class="w"> </span><span class="s">{2022}</span><span class="p">,</span>
+</span><span data-line="8"><span class="w">  </span><span class="na">publisher</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{ACM}</span><span class="p">,</span>
+</span><span data-line="9"><span class="w">  </span><span class="na">address</span><span class="w">   </span><span class="p">=</span><span class="w"> </span><span class="s">{Madrid, Spain}</span><span class="p">,</span>
+</span><span data-line="10"><span class="w">  </span><span class="na">doi</span><span class="w">       </span><span class="p">=</span><span class="w"> </span><span class="s">{10.1145/3555051.3555076}</span><span class="p">,</span>
+</span><span data-line="11"><span class="w">  </span><span class="na">url</span><span class="w">       </span><span class="p">=</span><span class="w"> </span><span class="s">{https://doi.org/10.1145/3555051.3555076}</span>
+</span><span data-line="12"><span class="p">}</span>
+</span></pre></div>
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+</section>
+
+      </article>
+      
+
+
+    </main>
+  </div><footer class="sy-foot">
+  <div class="sy-foot-inner sy-container mx-auto">
+    <div class="sy-foot-reserved md:flex justify-between items-center">
+      <div class="sy-foot-copyright"><p>2020-2026, Intelligent Robotics Lab and contributors</p>
+  
+  <p>
+    Made with
+    
+    <a href="https://www.sphinx-doc.org/">Sphinx</a> and
+    
+    <a href="https://shibuya.lepture.com">Shibuya theme</a>.
+  </p>
+</div>
+      <div class="sy-foot-socials">
+  <a href="https://github.com/MOCAP4ROS2-Project" aria-label="GitHub">
+    <iconify-icon icon="simple-icons:github"></iconify-icon>
+  </a></div>
+    </div>
+  </div>
+</footer>
+      <script src="_static/documentation_options.js?v=51b770b3"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="_static/copybutton.js?v=a5fa425f"></script>
+      <script data-sd-tabs-storage-prefix="sphinx-design-tab-id-" src="_static/design-tabs.js?v=fcb327ea"></script>
+      <script src="_static/shibuya.js?v=50760d75"></script>
+      <script src="_static/version_switcher.js?v=1d69d2d9"></script>
+      <script src="_static/repo_cards.js?v=ccee3576"></script></body>
+</html>

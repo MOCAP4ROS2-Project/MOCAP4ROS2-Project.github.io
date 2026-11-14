@@ -1,0 +1,103 @@
+/* MOCAP4ROS2 additions to the Shibuya theme. */
+.mocap4r2-version {
+  margin-left: 0.75rem;
+  padding: 0.15rem 0.4rem;
+  border: 1px solid var(--sy-c-border, #ccc);
+  border-radius: 6px;
+  background: transparent;
+  color: inherit;
+  font-size: 0.8rem;
+}
+
+/* Landing: the logo replaces the text title (kept for <title> and search). */
+section:has(> .mocap4r2-hero) > h1 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.mocap4r2-hero img {
+  max-width: 640px;
+  width: 100%;
+  margin: 0 0 1.5rem -0.75rem;
+}
+
+.sy-head-brand img {
+  height: 2rem;
+  width: auto;
+}
+
+table.docutils td, table.docutils th {
+  vertical-align: top;
+}
+
+/* Repository cards of the right sidebar */
+.mocap4r2-repos {
+  margin: 1rem 0;
+}
+
+.mocap4r2-repos-title {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--sy-c-text-weak, inherit);
+  margin-bottom: 0.4rem;
+}
+
+.mocap4r2-repo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.45rem 0.6rem;
+  margin-bottom: 0.4rem;
+  border: 1px solid var(--sy-c-border, #ddd);
+  border-radius: 8px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.mocap4r2-repo:hover {
+  border-color: var(--accent-9, #e5484d);
+}
+
+.mocap4r2-repo-main {
+  border-color: var(--accent-a8, #e5484d);
+}
+
+.mocap4r2-repo-icon {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+.mocap4r2-repo-text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  line-height: 1.3;
+}
+
+.mocap4r2-repo-label {
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.mocap4r2-repo-name {
+  font-size: 0.75rem;
+  opacity: 0.7;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mocap4r2-repo-count {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.75rem;
+}
+
+.mocap4r2-repo-count strong {
+  margin-right: 0.6rem;
+}
