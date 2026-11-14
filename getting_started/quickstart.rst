@@ -44,3 +44,21 @@ driver does.
 
 Every command works the same with a real system: replace the simulated driver by
 the driver of :doc:`your system </systems/index>`.
+
+The real OptiTrack driver, without Motive
+*****************************************
+
+``natnet_simulator`` plays Motive on this computer; the OptiTrack driver connects to
+it exactly as it would to Motive:
+
+.. code-block:: console
+
+   $ ros2 run mocap4r2_optitrack_driver natnet_simulator
+   $ ros2 launch mocap4r2_optitrack_driver optitrack_driver.launch.yaml \
+       params_file:=$(ros2 pkg prefix mocap4r2_optitrack_driver)/share/mocap4r2_optitrack_driver/config/optitrack_simulator.yaml
+   $ ros2 mocap4r2 tui
+
+In the TUI the status box shows the driver connected to *FakeMotive*; the
+*Start* button activates it and the bodies appear below. Stop
+``natnet_simulator`` while the driver is active and the link turns to *connected,
+no data*.
