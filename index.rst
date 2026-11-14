@@ -71,6 +71,31 @@ MOCAP4ROS2
       A driver only translates its system into the MOCAP4ROS2 interfaces: every
       tool works with it from the first frame.
 
+Citing MOCAP4ROS2
+-----------------
+
+If you use MOCAP4ROS2 in your research, please cite the reference paper:
+
+   F. Martín, J. M. Guerrero, A. García, F. Rodríguez and V. Matellán.
+   `MOCAP4ROS2: An Open Source Framework for Motion Capture Systems in Robotics
+   <https://doi.org/10.1145/3555051.3555076>`_. *Proceedings of the 18th International
+   Symposium on Open Collaboration (OpenSym 2022)*, ACM, 2022.
+
+.. code-block:: bibtex
+
+   @inproceedings{martin2022mocap4ros2,
+     author    = {Mart{\'i}n, Francisco and Guerrero, Jos{\'e} Miguel and Garc{\'i}a, A. Alberto and Rodr{\'i}guez, Francisco and Matell{\'a}n, Vicente},
+     title     = {{MOCAP4ROS2}: An Open Source Framework for Motion Capture Systems in Robotics},
+     booktitle = {Proceedings of the 18th International Symposium on Open Collaboration},
+     series    = {OpenSym '22},
+     pages     = {1--3},
+     year      = {2022},
+     publisher = {ACM},
+     address   = {Madrid, Spain},
+     doi       = {10.1145/3555051.3555076},
+     url       = {https://doi.org/10.1145/3555051.3555076}
+   }
+
 .. toctree::
    :hidden:
 

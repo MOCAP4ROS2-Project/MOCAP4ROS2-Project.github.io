@@ -1,6 +1,7 @@
 {
-  "default": "latest",
+  "default": "2.0.0",
   "versions": [
-    {"name": "latest", "ref": "HEAD", "title": "latest (development)"}
+    {"name": "latest", "ref": "HEAD", "title": "latest (development)"},
+    {"name": "2.0.0", "ref": "2.0.0", "title": "2.0.0 (stable)"}
   ]
 }
