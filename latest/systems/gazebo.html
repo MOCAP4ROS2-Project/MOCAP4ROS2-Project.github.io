@@ -285,7 +285,8 @@ default) configure the simulated Motive.</p>
 when the simulation is reset, and stamps the data with the simulation time.</p>
 <section id="demos">
 <h2>Demos<a class="headerlink" href="#demos" title="Link to this heading">#</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">mocap4r2_gz_demos</span></code> has two ready-made scenarios:</p>
+<p><code class="docutils literal notranslate"><span class="pre">mocap4r2_gz_demos</span></code> (Jazzy and newer) has two ready-made scenarios, which also open
+RViz (<code class="docutils literal notranslate"><span class="pre">rviz:=false</span></code> to skip it):</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="gp">$ </span>ros2<span class="w"> </span>launch<span class="w"> </span>mocap4r2_gz_demos<span class="w"> </span>robot_groundtruth.launch.yaml<span class="w"> </span>system:<span class="o">=</span>ros
 </span><span data-line="2"><span class="gp">$ </span>ros2<span class="w"> </span>launch<span class="w"> </span>mocap4r2_gz_demos<span class="w"> </span>robot_groundtruth.launch.yaml<span class="w"> </span>system:<span class="o">=</span>optitrack
 </span><span data-line="3"><span class="gp">$ </span>ros2<span class="w"> </span>launch<span class="w"> </span>mocap4r2_gz_demos<span class="w"> </span>human_motion.launch.yaml
@@ -298,6 +299,8 @@ OptiTrack driver connects to it, as in the lab.</p></li>
 <li><p><strong>Human motion</strong>: a walking mannequin streamed as a skeleton (and its head as a rigid
 body); <code class="docutils literal notranslate"><span class="pre">skeleton_publisher</span></code> publishes its segments as TF and its joint angles.</p></li>
 </ul>
+<p>The guides walk through each one: <a class="reference internal" href="../guides/robot_groundtruth.html#gt-demo"><span class="std std-ref">robot ground truth</span></a> and
+<a class="reference internal" href="../guides/human_motion.html#human-demo"><span class="std std-ref">human motion</span></a>.</p>
 </section>
 </section>
 

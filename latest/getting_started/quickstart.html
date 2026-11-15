@@ -113,6 +113,7 @@ data-aria-dark="Switch to auto color mode">
       <i class="i-lucide close"></i>
     </button>
     <div class="sy-scrollbar sy-rside-inner px-6 xl:top-16 xl:sticky xl:pl-0 pt-6 pb-4"><div class="localtoc"><h3>On this page</h3><ul>
+<li><a class="reference internal" href="#robot-and-human-demos-in-gazebo">Robot and human demos in Gazebo</a></li>
 <li><a class="reference internal" href="#the-real-optitrack-driver-without-motive">The real OptiTrack driver, without Motive</a></li>
 </ul>
 </div><div class="mocap4r2-repos">
@@ -288,6 +289,16 @@ driver does.</p>
 </ol>
 <p>Every command works the same with a real system: replace the simulated driver by
 the driver of <a class="reference internal" href="../systems/index.html"><span class="doc">your system</span></a>.</p>
+<section id="robot-and-human-demos-in-gazebo">
+<h2>Robot and human demos in Gazebo<a class="headerlink" href="#robot-and-human-demos-in-gazebo" title="Link to this heading">#</a></h2>
+<p>On Jazzy and newer, <code class="docutils literal notranslate"><span class="pre">mocap4r2_gz_demos</span></code> simulates a mocap room with a robot or a
+walking person, and runs the tools on it:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="gp">$ </span>ros2<span class="w"> </span>launch<span class="w"> </span>mocap4r2_gz_demos<span class="w"> </span>robot_groundtruth.launch.yaml<span class="w">   </span><span class="c1"># robot ground truth</span>
+</span><span data-line="2"><span class="gp">$ </span>ros2<span class="w"> </span>launch<span class="w"> </span>mocap4r2_gz_demos<span class="w"> </span>human_motion.launch.yaml<span class="w">        </span><span class="c1"># skeleton and joint angles</span>
+</span></pre></div>
+</div>
+<p>See <a class="reference internal" href="../guides/robot_groundtruth.html#gt-demo"><span class="std std-ref">Try it in simulation</span></a> and <a class="reference internal" href="../guides/human_motion.html#human-demo"><span class="std std-ref">Try it in simulation</span></a> for what to look at.</p>
+</section>
 <section id="the-real-optitrack-driver-without-motive">
 <h2>The real OptiTrack driver, without Motive<a class="headerlink" href="#the-real-optitrack-driver-without-motive" title="Link to this heading">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">natnet_simulator</span></code> plays Motive on this computer; the OptiTrack driver connects to

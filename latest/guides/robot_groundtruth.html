@@ -119,6 +119,7 @@ data-aria-dark="Switch to auto color mode">
 <li><a class="reference internal" href="#align-the-map-with-the-mocap-room">4. Align the map with the mocap room</a></li>
 <li><a class="reference internal" href="#measure-the-error">5. Measure the error</a></li>
 <li><a class="reference internal" href="#time-synchronization">Time synchronization</a></li>
+<li><a class="reference internal" href="#try-it-in-simulation">Try it in simulation</a></li>
 </ul>
 </div><div class="mocap4r2-repos">
   <p class="mocap4r2-repos-title">Repositories</p>
@@ -335,6 +336,25 @@ clock, synchronize both (chrony/PTP). <code class="docutils literal notranslate"
 a system are far from the ROS clock. <code class="docutils literal notranslate"><span class="pre">mocap4r2_gt_tools.trajectory.time_offset</span></code>
 estimates the offset between two signals (for example the yaw rate of the ground
 truth and of the robot IMU) by cross-correlation.</p>
+</section>
+<section id="try-it-in-simulation">
+<span id="gt-demo"></span><h2>Try it in simulation<a class="headerlink" href="#try-it-in-simulation" title="Link to this heading">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">mocap4r2_gz_demos</span></code> (Jazzy and newer) runs this guide without a mocap room: Gazebo
+streams a robot with a marker plate that drives in circles, and <code class="docutils literal notranslate"><span class="pre">robot_gt</span></code> is already
+configured for it (<code class="docutils literal notranslate"><span class="pre">rigid_body:</span> <span class="pre">robot</span></code> and its calibrated <code class="docutils literal notranslate"><span class="pre">body_to_robot</span></code>).</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="gp">$ </span>ros2<span class="w"> </span>launch<span class="w"> </span>mocap4r2_gz_demos<span class="w"> </span>robot_groundtruth.launch.yaml
+</span></pre></div>
+</div>
+<p>RViz shows the markers and the TF <code class="docutils literal notranslate"><span class="pre">mocap</span> <span class="pre">-&gt;</span> <span class="pre">gt_origin</span> <span class="pre">-&gt;</span> <span class="pre">base_link_gt</span></code> following the
+robot. In another terminal:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="gp">$ </span>ros2<span class="w"> </span>mocap4r2<span class="w"> </span>tui<span class="w">                              </span><span class="c1"># rate, latency and tracking</span>
+</span><span data-line="2"><span class="gp">$ </span>ros2<span class="w"> </span>topic<span class="w"> </span><span class="nb">echo</span><span class="w"> </span>/robot_gt/odom<span class="w">                 </span><span class="c1"># ground truth pose and velocities</span>
+</span><span data-line="3"><span class="gp">$ </span>ros2<span class="w"> </span>run<span class="w"> </span>tf2_ros<span class="w"> </span>tf2_echo<span class="w"> </span>mocap<span class="w"> </span>base_link_gt
+</span></pre></div>
+</div>
+<p>With <code class="docutils literal notranslate"><span class="pre">system:=optitrack</span></code> Gazebo plays OptiTrack Motive and the real OptiTrack driver
+connects to it, as in the lab: the same test covers the driver and its network
+configuration.</p>
 </section>
 </section>
 

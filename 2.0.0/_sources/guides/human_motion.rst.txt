@@ -41,3 +41,31 @@ Export for biomechanics software
 ``--max-gap N`` fills gaps of up to N frames by linear interpolation; ``--lowpass F``
 applies a zero-phase second order Butterworth filter (forward and backward, the usual
 choice for marker data; 6 Hz is common for gait).
+
+.. _human-demo:
+
+Try it in simulation
+********************
+
+``mocap4r2_gz_demos`` (Jazzy and newer) streams a walking mannequin from Gazebo as the
+skeleton ``walker`` (and its head as the rigid body ``head``), with
+``skeleton_publisher`` already running:
+
+.. code-block:: console
+
+   $ ros2 launch mocap4r2_gz_demos human_motion.launch.yaml
+
+RViz shows the skeleton and the TF of its segments (``walker/<segment>``). In another
+terminal:
+
+.. code-block:: console
+
+   $ ros2 mocap4r2 tui                                   # rate, latency and tracking
+   $ ros2 topic echo /skeleton_publisher/joint_states    # joint angles
+
+And the whole biomechanics chain, from recording to a C3D file:
+
+.. code-block:: console
+
+   $ ros2 mocap4r2 record --session walk01               # Ctrl-C to finish
+   $ ros2 mocap4r2 export walk01 --format c3d --max-gap 10 --lowpass 6

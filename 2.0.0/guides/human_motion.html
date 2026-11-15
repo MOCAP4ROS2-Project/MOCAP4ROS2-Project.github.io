@@ -116,6 +116,7 @@ data-aria-dark="Switch to auto color mode">
 <li><a class="reference internal" href="#skeletons">Skeletons</a></li>
 <li><a class="reference internal" href="#capture-sessions">Capture sessions</a></li>
 <li><a class="reference internal" href="#export-for-biomechanics-software">Export for biomechanics software</a></li>
+<li><a class="reference internal" href="#try-it-in-simulation">Try it in simulation</a></li>
 </ul>
 </div><div class="mocap4r2-repos">
   <p class="mocap4r2-repos-title">Repositories</p>
@@ -286,6 +287,26 @@ ezc3d; missing samples are flagged as invalid.</p></li>
 <p><code class="docutils literal notranslate"><span class="pre">--max-gap</span> <span class="pre">N</span></code> fills gaps of up to N frames by linear interpolation; <code class="docutils literal notranslate"><span class="pre">--lowpass</span> <span class="pre">F</span></code>
 applies a zero-phase second order Butterworth filter (forward and backward, the usual
 choice for marker data; 6 Hz is common for gait).</p>
+</section>
+<section id="try-it-in-simulation">
+<span id="human-demo"></span><h2>Try it in simulation<a class="headerlink" href="#try-it-in-simulation" title="Link to this heading">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">mocap4r2_gz_demos</span></code> (Jazzy and newer) streams a walking mannequin from Gazebo as the
+skeleton <code class="docutils literal notranslate"><span class="pre">walker</span></code> (and its head as the rigid body <code class="docutils literal notranslate"><span class="pre">head</span></code>), with
+<code class="docutils literal notranslate"><span class="pre">skeleton_publisher</span></code> already running:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="gp">$ </span>ros2<span class="w"> </span>launch<span class="w"> </span>mocap4r2_gz_demos<span class="w"> </span>human_motion.launch.yaml
+</span></pre></div>
+</div>
+<p>RViz shows the skeleton and the TF of its segments (<code class="docutils literal notranslate"><span class="pre">walker/&lt;segment&gt;</span></code>). In another
+terminal:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="gp">$ </span>ros2<span class="w"> </span>mocap4r2<span class="w"> </span>tui<span class="w">                                   </span><span class="c1"># rate, latency and tracking</span>
+</span><span data-line="2"><span class="gp">$ </span>ros2<span class="w"> </span>topic<span class="w"> </span><span class="nb">echo</span><span class="w"> </span>/skeleton_publisher/joint_states<span class="w">    </span><span class="c1"># joint angles</span>
+</span></pre></div>
+</div>
+<p>And the whole biomechanics chain, from recording to a C3D file:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="gp">$ </span>ros2<span class="w"> </span>mocap4r2<span class="w"> </span>record<span class="w"> </span>--session<span class="w"> </span>walk01<span class="w">               </span><span class="c1"># Ctrl-C to finish</span>
+</span><span data-line="2"><span class="gp">$ </span>ros2<span class="w"> </span>mocap4r2<span class="w"> </span><span class="nb">export</span><span class="w"> </span>walk01<span class="w"> </span>--format<span class="w"> </span>c3d<span class="w"> </span>--max-gap<span class="w"> </span><span class="m">10</span><span class="w"> </span>--lowpass<span class="w"> </span><span class="m">6</span>
+</span></pre></div>
+</div>
 </section>
 </section>
 
