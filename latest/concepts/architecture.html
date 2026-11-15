@@ -253,16 +253,8 @@ data-aria-dark="Switch to auto color mode">
 <p>MOCAP4ROS2 separates <strong>drivers</strong> from <strong>tools</strong>. A driver only translates its system
 into the MOCAP4ROS2 interfaces; every tool works on those interfaces and never needs
 to know which system produced the data.</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span><span data-line="1">OptiTrack   Vicon   Qualisys   Gazebo   simulated   your system
-</span><span data-line="2">    \         |         |         |          |           /
-</span><span data-line="3">     +--------+---------+---------+----------+----------+
-</span><span data-line="4">                  mocap4r2_interfaces  (one per system)
-</span><span data-line="5">          markers · rigid_bodies · skeletons · /mocap4r2/*
-</span><span data-line="6">     +--------+---------+---------+----------+----------+
-</span><span data-line="7">    /         |         |         |          |           \
-</span><span data-line="8">marker_viz  robot_gt  gt_tools  motion_tools  CLI / TUI  your application
-</span></pre></div>
-</div>
+<img alt="MOCAP4ROS2 architecture: drivers publish mocap4r2_interfaces, tools consume them" class="light-only" src="../_images/architecture_light.png" />
+<img alt="MOCAP4ROS2 architecture: drivers publish mocap4r2_interfaces, tools consume them" class="dark-only" src="../_images/architecture_dark.png" />
 <section id="systems">
 <h2>Systems<a class="headerlink" href="#systems" title="Link to this heading">#</a></h2>
 <p>Every system is a lifecycle node derived from <code class="docutils literal notranslate"><span class="pre">mocap4r2_control::MocapSystemNode</span></code>:</p>
