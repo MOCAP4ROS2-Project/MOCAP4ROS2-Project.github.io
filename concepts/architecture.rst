@@ -5,16 +5,13 @@ MOCAP4ROS2 separates **drivers** from **tools**. A driver only translates its sy
 into the MOCAP4ROS2 interfaces; every tool works on those interfaces and never needs
 to know which system produced the data.
 
-.. code-block:: text
+.. image:: /images/architecture_light.png
+   :alt: MOCAP4ROS2 architecture: drivers publish mocap4r2_interfaces, tools consume them
+   :class: light-only
 
-   OptiTrack   Vicon   Qualisys   Gazebo   simulated   your system
-       \         |         |         |          |           /
-        +--------+---------+---------+----------+----------+
-                     mocap4r2_interfaces  (one per system)
-             markers · rigid_bodies · skeletons · /mocap4r2/*
-        +--------+---------+---------+----------+----------+
-       /         |         |         |          |           \
-   marker_viz  robot_gt  gt_tools  motion_tools  CLI / TUI  your application
+.. image:: /images/architecture_dark.png
+   :alt: MOCAP4ROS2 architecture: drivers publish mocap4r2_interfaces, tools consume them
+   :class: dark-only
 
 Systems
 *******
