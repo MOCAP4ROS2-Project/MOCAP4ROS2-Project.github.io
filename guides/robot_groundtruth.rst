@@ -98,3 +98,29 @@ clock, synchronize both (chrony/PTP). ``ros2 mocap4r2 doctor`` warns when the st
 a system are far from the ROS clock. ``mocap4r2_gt_tools.trajectory.time_offset``
 estimates the offset between two signals (for example the yaw rate of the ground
 truth and of the robot IMU) by cross-correlation.
+
+.. _gt-demo:
+
+Try it in simulation
+********************
+
+``mocap4r2_gz_demos`` (Jazzy and newer) runs this guide without a mocap room: Gazebo
+streams a robot with a marker plate that drives in circles, and ``robot_gt`` is already
+configured for it (``rigid_body: robot`` and its calibrated ``body_to_robot``).
+
+.. code-block:: console
+
+   $ ros2 launch mocap4r2_gz_demos robot_groundtruth.launch.yaml
+
+RViz shows the markers and the TF ``mocap -> gt_origin -> base_link_gt`` following the
+robot. In another terminal:
+
+.. code-block:: console
+
+   $ ros2 mocap4r2 tui                              # rate, latency and tracking
+   $ ros2 topic echo /robot_gt/odom                 # ground truth pose and velocities
+   $ ros2 run tf2_ros tf2_echo mocap base_link_gt
+
+With ``system:=optitrack`` Gazebo plays OptiTrack Motive and the real OptiTrack driver
+connects to it, as in the lab: the same test covers the driver and its network
+configuration.

@@ -43,7 +43,8 @@ when the simulation is reset, and stamps the data with the simulation time.
 Demos
 *****
 
-``mocap4r2_gz_demos`` has two ready-made scenarios:
+``mocap4r2_gz_demos`` (Jazzy and newer) has two ready-made scenarios, which also open
+RViz (``rviz:=false`` to skip it):
 
 .. code-block:: console
 
@@ -56,3 +57,6 @@ Demos
   OptiTrack driver connects to it, as in the lab.
 * **Human motion**: a walking mannequin streamed as a skeleton (and its head as a rigid
   body); ``skeleton_publisher`` publishes its segments as TF and its joint angles.
+
+The guides walk through each one: :ref:`robot ground truth <gt-demo>` and
+:ref:`human motion <human-demo>`.

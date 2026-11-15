@@ -45,6 +45,19 @@ driver does.
 Every command works the same with a real system: replace the simulated driver by
 the driver of :doc:`your system </systems/index>`.
 
+Robot and human demos in Gazebo
+*******************************
+
+On Jazzy and newer, ``mocap4r2_gz_demos`` simulates a mocap room with a robot or a
+walking person, and runs the tools on it:
+
+.. code-block:: console
+
+   $ ros2 launch mocap4r2_gz_demos robot_groundtruth.launch.yaml   # robot ground truth
+   $ ros2 launch mocap4r2_gz_demos human_motion.launch.yaml        # skeleton and joint angles
+
+See :ref:`gt-demo` and :ref:`human-demo` for what to look at.
+
 The real OptiTrack driver, without Motive
 *****************************************
 
