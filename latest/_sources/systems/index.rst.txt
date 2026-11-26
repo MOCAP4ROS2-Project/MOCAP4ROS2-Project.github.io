@@ -20,6 +20,10 @@ Systems
      - ``mocap4r2_qualisys_driver``
      - RT protocol, Qualisys C++ SDK (included), TCP or UDP
      - markers, 6DOF bodies, skeletons
+   * - :doc:`Nokov <nokov>` (XINGYING)
+     - ``mocap4r2_nokov_driver``
+     - Nokov SDK (included); maintained by NOKOV, built from source
+     - markers, rigid bodies, skeletons
    * - :doc:`Gazebo <gazebo>`
      - ``mocap4r2_gz_plugin``
      - plugin of the world; ROS output or simulated Motive
@@ -40,5 +44,6 @@ default: connect and wait for START — or ``activate``).
    optitrack
    vicon
    qualisys
+   nokov
    gazebo
    simulated
